@@ -57,11 +57,11 @@ body {
 
 /*underline hover*/
 .nav-links a {
-  /* padding: 10px 10px; */
+  padding: 10px 10px;
   position: relative;
 }
 
-a:after {
+nav a:after {
   width: 0;
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
@@ -75,7 +75,7 @@ a:after {
   transition: 0.5s ease-out, left 0.5s ease-out;
 }
 
-a:hover:after {
+nav a:hover:after {
   width: 100%;
   left: 0%;
 }
@@ -172,10 +172,8 @@ a:hover:after {
 .slide-3 {
   background-image: url(./src/character_murada.png);
 } */
-
-
 .mySlides {
-  display: none
+  display: none;
 }
 
 img {
@@ -197,7 +195,7 @@ img {
   top: 50%;
   width: auto;
   padding: 16px;
-  margin-top: -100px;
+  margin-top: -150px;
   color: white;
   font-weight: bold;
   font-size: 30px;
@@ -214,7 +212,7 @@ img {
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
+  right: 0px;
   border-radius: 3px 0 0 3px;
 }
 
@@ -226,7 +224,7 @@ img {
 
 /* Caption text */
 .text {
-  color: #FFF;
+  color: #fff;
   font-size: 15px;
   padding: 8px 12px;
   position: relative;
@@ -262,26 +260,25 @@ img {
 
 @-webkit-keyframes fade {
   from {
-    opacity: .4
+    opacity: 0.4;
   }
 
   to {
-    opacity: 1
+    opacity: 1;
   }
 }
 
 @keyframes fade {
   from {
-    opacity: .4
+    opacity: 0.4;
   }
 
   to {
-    opacity: 1
+    opacity: 1;
   }
 }
 
 /* intro container */
-
 
 .intro_container {
   border: 5px solid white;
@@ -321,21 +318,21 @@ img {
 
 @-webkit-keyframes fade {
   from {
-    opacity: .4
+    opacity: 0.4;
   }
 
   to {
-    opacity: 1
+    opacity: 1;
   }
 }
 
 @keyframes fade {
   from {
-    opacity: .4
+    opacity: 0.4;
   }
 
   to {
-    opacity: 1
+    opacity: 1;
   }
 }
 
