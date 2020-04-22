@@ -1,224 +1,187 @@
 <!DOCTYPE html>
 
-<html lang="en">
-  <head>
+<html lang="zh">
+
+<head>
     <meta charset="UTF-8" />
-    <title>index</title>
+    <title>鬼滅の刃 3006 プロジェクト</title>
+    <link rel="icon" href="src/logo.png">
+
     <link rel="stylesheet" href="CSS.css" />
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
 
-    <!-- nav bar -->
-    <nav id="navbar">
-      <div class="logo">
-        <img src="./Res/logo.png" width="80px" height="70px" />
-      </div>
-      <u1 class="nav-links">
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">Game</a>
-        </li>
-        <li class="dropdown">
-          <a href="#">Other</a>
-          <div class="dropdown-content">
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-          </div>
-        </li>
-        <li>
-          <a href="#">Projects</a>
-        </li>
-      </u1>
-    </nav>
-  </head>
+</head>
 
-  <body>
-    <!-- image slider -->
-    <!-- <div class="slider-container">
-    <div class="menu">
-      <label for="slide-dot-1"></label>
-      <label for="slide-dot-2"></label>
-      <label for="slide-dot-3"></label>
+    
+<body>
+
+    <div class="topNav">
+        <a href="./index.html"><img src="./src/logo.png" alt="Logo" class="navLogo"></a>
+
+        <nav >
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./koukyuu.html">呼吸</a></li>
+                <li><a href="">?_?</a></li>
+                <li><a href="">Credit</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+
     </div>
 
-    <input class="slide_dot" id="slide-dot-1" type="radio" name="slides" checked="" />
-    <div class=" slide slide-1">
     </div>
 
-    <input class="slide_dot" id="slide-dot-2" type="radio" name="slides" />
-    <div class="slide slide-2"></div>
+    <div class="slideshow-container">
+        <div class="character_img fade">
+            <img src="./src/character_murada.png" />
+        </div>
 
-    <input class="slide_dot" id="slide-dot-3" type="radio" name="slides" />
-    <div class="slide slide-3"></div>
+        <div class="character_img fade">
+            <img src="./src/character_ozaki.png" />
+        </div>
 
+        <div class="character_img fade">
+            <img src="./src/character_tuyurikanao.png" />
+        </div>
 
-
-  </div> -->
-    <div class="slidershow-container">
-      <div class="mySlides fade">
-        <img
-          src="./Res/character_chuntaro.png"
-          alt=""
-          style="width: 500px;"
-          height="400px"
-        />
-        <div class="text">Hello</div>
-      </div>
-
-      <div class="mySlides fade">
-        <img
-          src="./Res/character_murada.png"
-          alt=""
-          style="width: 500px;"
-          height="400px"
-        />
-        <div class="text">Hello</div>
-      </div>
-
-      <div class="mySlides fade">
-        <img
-          src="./Res/character_ozaki.png"
-          alt=""
-          style="width: 500px;"
-          height="400px"
-        />
-        <div class="text">Hello</div>
-      </div>
-
-      <div class="mySlides fade">
-        <img
-          src="./Res/character_tuyurikanao.png"
-          alt=""
-          style="width: 500px;"
-          height="400px"
-        />
-        <div class="text">Hello</div>
-      </div>
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plueSlides(1)">&#10095;</a>
+        <div class="character_img fade">
+            <img src="./src/character_chuntaro.png" />
+        </div>
+        <a class="prev" onclick="plusSlides(-1 )">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
     <br />
 
     <div style="text-align: center;">
-      <span class="slides_dot" onclick="currentSlide(1)"></span>
-      <span class="slides_dot" onclick="currentSlide(2)"></span>
-      <span class="slides_dot" onclick="currentSlide(3)"></span>
-      <span class="slides_dot" onclick="currentSlide(4)"></span>
+        <span class="slides_dot" onclick="currentSlide(1)"></span>
+        <span class="slides_dot" onclick="currentSlide(2)"></span>
+        <span class="slides_dot" onclick="currentSlide(3)"></span>
+        <span class="slides_dot" onclick="currentSlide(4)"></span>
     </div>
 
     <!-- Character Introduction Text -->
-    <div class="intro_container">
-      <!-- Intro content Start -->
-      <div class="intro_main fade" id="intro_murada">
-        <h1>村田</h1>
-        <div>
-          <h3>過去</h3>
-          因為家人被鬼殺害而加入鬼殺隊，自身使用的呼吸法為水之呼吸，但由於力量太弱而沒有水的特效[1]。
-          在130話中，顯示與富岡義勇是同一批通過考試的，並且也是當時照顧富岡的人之一。
+    <div style="display: flex; justify-content: center;">
+        <div class="intro_container">
+            <!-- Intro content Start -->
+            <div class="intro_main fade" id="intro_murada">
+                <h1>村田</h1>
+                <div class="intro_speak">情けない所を見せたが俺も鬼殺隊の剣士だ！ここは何とかする！</div>
+                <div>
+                    <h2>過去</h2>
+                    因為家人被鬼殺害而加入鬼殺隊，自身使用的呼吸法為水之呼吸，但由於力量太弱而沒有水的特效。
+                    在130話中，顯示與富岡義勇是同一批通過考試的，並且也是當時照顧富岡的人之一。
 
-          <h3>那田蜘蛛山篇</h3>
-          與眾隊員前往那田蜘蛛山上討伐鬼，但走到一半就聽到了奇怪聲響，接著隊員們就開始互相殘殺，之後撐到炭治郎等人前來後，是少數沒被蜘蛛絲控制且活下的人
-          在遇到炭治郎時毫髮無傷，並且吐槽了炭治郎的級別太低，需要更強的人才能解決蜘蛛鬼，後被伊之助揍了一拳無傷成就解除
-          後遵照炭治郎的期望努力戰鬥著，並且表示會在此應付攻擊，讓炭治郎與伊之助先前往斬殺操縱絲線的鬼。其後被蜘蛛鬼·姐姐的血鬼術·溶解之繭奇襲，因來不及反應而快速包覆，衣服被裡面的酸液所溶化，後被蟲柱胡蝶忍所救。
-          事件結束後被招集至柱合會議說明情況，結束後探望了炭治郎等人，並表示了柱給人的感覺非常可怕。
+                    <h2>那田蜘蛛山篇</h2>
+                    與眾隊員前往那田蜘蛛山上討伐鬼，但走到一半就聽到了奇怪聲響，接著隊員們就開始互相殘殺，之後撐到炭治郎等人前來後，是少數沒被蜘蛛絲控制且活下的人
+                    在遇到炭治郎時毫髮無傷，並且吐槽了炭治郎的級別太低，需要更強的人才能解決蜘蛛鬼，後被伊之助揍了一拳無傷成就解除
+                    後遵照炭治郎的期望努力戰鬥著，並且表示會在此應付攻擊，讓炭治郎與伊之助先前往斬殺操縱絲線的鬼。其後被蜘蛛鬼·姐姐的血鬼術·溶解之繭奇襲，因來不及反應而快速包覆，衣服被裡面的酸液所溶化，後被蟲柱胡蝶忍所救。
+                    事件結束後被招集至柱合會議說明情況，結束後探望了炭治郎等人，並表示了柱給人的感覺非常可怕。
 
-          <h3>柱指導訓練篇</h3>
-          與炭治郎等人在岩柱訓練中相遇，是少數能通過柱訓練來到最後岩柱關卡的人。
+                    <h2>柱指導訓練篇</h2>
+                    與炭治郎等人在岩柱訓練中相遇，是少數能通過柱訓練來到最後岩柱關卡的人。
 
-          <h3>無限城決戰篇</h3>
-          無限城篇中，與混入鬼殺隊的愈史郎同一組並進行支援，雖然與其他隊員們察覺有異，卻不曾想過愈史郎是鬼，
-          在救治善逸時，負責一邊吐槽愈史郎這個囂張的後輩，一邊清掃周圍的鬼，並能隻身對付（岩柱曾提及無限城的鬼被賦予了下弦的實力），與隊員們保護著愈史郎和傷者。
-          170話中，由於攙扶著哭啼又重傷的善逸，導致與其他隊員們走散，但也因此與伊之助和香奈乎奇蹟似的會合。（180話中無慘復活後對第一及第二部隊進行屠殺，此走散也間接躲過了無慘的殘害）
-          戰場移至地面後，本想上前相助，但被義勇阻止，對於名字被義勇記住感到十分感動，將重傷的炭治郎帶離戰場。後發現炭治郎瀕臨死亡，受到其他鬼殺隊員的求助，前往先去救愈史郎，欲讓愈史郎幫助炭治郎。
+                    <h2>無限城決戰篇</h2>
+                    無限城篇中，與混入鬼殺隊的愈史郎同一組並進行支援，雖然與其他隊員們察覺有異，卻不曾想過愈史郎是鬼，
+                    在救治善逸時，負責一邊吐槽愈史郎這個囂張的後輩，一邊清掃周圍的鬼，並能隻身對付（岩柱曾提及無限城的鬼被賦予了下弦的實力），與隊員們保護著愈史郎和傷者。
+                    170話中，由於攙扶著哭啼又重傷的善逸，導致與其他隊員們走散，但也因此與伊之助和香奈乎奇蹟似的會合。（180話中無慘復活後對第一及第二部隊進行屠殺，此走散也間接躲過了無慘的殘害）
+                    戰場移至地面後，本想上前相助，但被義勇阻止，對於名字被義勇記住感到十分感動，將重傷的炭治郎帶離戰場。後發現炭治郎瀕臨死亡，受到其他鬼殺隊員的求助，前往先去救愈史郎，欲讓愈史郎幫助炭治郎。
+                </div>
+            </div>
+
+            <div class="intro_main fade" id="intro_ozaki">
+                <h1>尾崎</h1>
+                <div class="intro_speak">駄目……こっちに来ないで……階級が上の人を連れて来て！！
+                    そうじゃないとみんな殺してしまう！！お願い……お願い！！</div>
+                <div>
+                    與數名隊員遭到蜘蛛媽媽的絲線操縱自相殘殺。
+                    在竈門炭治郎與嘴平伊之助出現之時，因不想再傷害到他人以及承受身上的痛苦，淚流滿面請求對方將自己殺掉，並告訴兩人去找更高階級的人來，否則會越來越慘重。
+                    由於被蜘蛛媽媽操縱，自身的實力比平時還要強許多，但即使身體骨折也被強制使出動作，長時間忍受著手腳各處之痛。
+                    在炭治郎利用線將自己丟至樹上，將絲線纏繞擺脫控制後感到意外，但隨即遭到蜘蛛媽媽連同自己和其他隊員的頭部扭斷。　
+                    其死亡引出了原先平靜的炭治郎的憤怒，對於輕易奪取人命的行為感到氣憤。
+                </div>
+            </div>
+
+            <div class="intro_main fade" id="intro_kanao">
+                <h1>栗花落 カナヲ</h1>
+                <div class="intro_speak">花の呼吸 終ノ型 彼岸朱眼</div>
+                <div>
+                    <h2>過去</h2>
+                    幼時過著飽受虐待的日子，但因視覺敏銳而得以避開不被打到自身要害，也因此不敢輕易表達自身的情感，後被販賣並被胡蝶香奈惠及胡蝶忍所救。
+                    不擅長做主，但從香奈惠那兒學到了擲硬幣決定事情的方法。在香奈惠被鬼殺害後，因為在葬禮上哭不出來而自責了許久。
+                    香奈惠和忍起初不同意香奈乎加入鬼殺隊，但她將看過的花之呼吸學得有模有樣，並偷偷參加了選拔。
+
+                    <h2>鬼殺隊入隊篇</h2>
+                    與炭治郎在最終選拔中同樣存活的五人之一，當時身上並沒有沾到半點灰塵，也是其首次登場。
+
+                    <h2>那田蜘蛛山篇</h2>
+                    篇末與鬼殺隊的隱部隊前往山中搜救，並擔任隱的指揮者，遵照上級命令活捉了炭治郎與禰豆子，用一腳就將重傷的炭治郎踹到昏迷。
+
+                    <h2>柱眾審判篇</h2>
+                    於炭治郎等人在蝴蝶屋休養時協助進行機能恢復訓練，在炭治郎完成訓練後向香奈乎道別，並且以擲硬幣為賭注，希望香奈乎能依照自己的意志行動，對於炭治郎的舉動感到驚訝，在炭治郎的影響下也慢慢改變。
+
+                    <h2>遊廓潛入作戰篇</h2>
+                    遵照了自己的意志，與炭治郎成功阻止了音柱宇髓天元帶走葵。
+                    在炭治郎被帶回蝴蝶屋治療後的兩個月，是第一個發現炭治郎清醒的人。
+                    發現炭治郎清醒後落淚，並靜靜坐在炭治郎旁邊一陣子。把盤子摔落在地而不管不顧，後被前來探望的後藤稍微教訓了一下，告知與階級無關，由於大家很擔心的緣故，應該快點通知大家炭治郎清醒的消息。在病房內變得熱鬧後，炭治郎因放心而睡著，由於眾人太過騷亂而主動出聲讓大家安靜一些。（一周後炭治郎康復）
+
+                    <h2>柱指導訓練篇</h2>
+                    在胡蝶忍回來蝴蝶屋後前來探訪忍，當時正準備前往風柱處進行訓練，
+                    得知忍沒有參加這次指導後有些沮喪，並對忍表示自己想和師傅練習，這讓忍覺得很欣慰。
+                    後被忍告知了如何殺死殺害姐姐胡蝶香奈惠的鬼的方法。
+
+                    <h2>無限城決戰篇</h2>
+                    <h3>香奈乎&伊之助 vs.上弦之貳·童磨</h3>
+                    進入無限城後目睹了恩人胡蝶忍被上弦之貳童磨殺害並吸收，與伊之助合力對抗童磨，被童磨認為實力超過了蟲柱胡蝶忍。
+                    在童磨因胡蝶忍留在體內的劇毒發作之後，使用了「花之呼吸·終之型·彼岸朱眼」看穿了童磨的血鬼術，並和伊之助協力將其斬首，但右眼也因此失明。
+                    將童磨擊敗後找到了忍的髮飾，回想起兩位義姐後落淚。隨後攙扶著同樣淚流滿面的伊之助前往其他戰場中。
+                    其後與伊之助同村田和善逸奇蹟似會面，無限城崩塌前夕感受到劇烈的震動，採以備戰姿態。
+
+                    <h3>眾人vs.鬼王·鬼舞辻無慘</h3>
+                    柱與無慘交戰時，與伊之助和善逸使用了愈史郎的血鬼術隱身參戰，在符咒被無慘切開後出現（此時香奈乎的髮飾已換成了忍的），後與三人持續使用伊之助撿來的符咒隱身戰鬥。
+                    在無慘爆發後成為唯一的輕傷者，但由於恐懼而無法移動雙腿，在要被無慘攻擊時，被炭治郎所救，後被託付給隱的成員照顧。
+
+                    <h3>鬼王</h3>
+                    看見鬼化的炭治郎與禰豆子糾纏的場景，回想到忍為防止禰豆子變回人失敗，給自己多一份的備份藥，意識到自己還留有一隻眼的意義，隨即再次使用了彼岸朱眼，身體被炭治郎刺穿後同時為炭治郎注射了能變回人的藥物。
+                </div>
+            </div>
+
+            <div class="intro_main fade" id="intro_chutaro">
+                <h1>うこぎ／チュン太郎</h1>
+                <div class="intro_speak">ちゅ！ちゅ！ちゅ！ちゅ！</div>
+                <div>
+                    <ul style="list-style-type: square; margin-left: 2em;">
+                        <li>鬼殺隊所屬的鎹雀。</li>
+                        <li>善逸的鎹雀，本名五加木（うこぎ）。</li>
+                        <li>被善逸取名為啾太郎（チュン太郎），負責傳達任務給善逸。</li>
+                        <li>因家人被鬼殺死而加入的鬼殺隊鬼連麻雀也不放過</li>
+                        <li>由於不會說人話而無法傳達給善逸，但能跟炭治郎溝通。</li>
+                        <li>
+                            常常被善逸的行為困擾著，有時也會與善逸吵架，用嘴攻擊善逸的手。
+                        </li>
+                        <li>
+                            在那田蜘蛛山時，當善逸感到害怕時飛往其頭上，並且在善逸遇上蜘蛛鬼哥哥時，沒有飛走，而是躲進了善逸的衣中，陪伴著善逸。後來幫前來支援的蟲柱胡蝶忍指引善逸的所在地。
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Intro content END -->
         </div>
-      </div>
-
-      <div class="intro_main fade" id="intro_ozaki">
-        <h1>尾崎</h1>
-        <div>
-          與數名隊員遭到蜘蛛媽媽的絲線操縱自相殘殺。
-          在竈門炭治郎與嘴平伊之助出現之時，因不想再傷害到他人以及承受身上的痛苦，淚流滿面請求對方將自己殺掉，並告訴兩人去找更高階級的人來，否則會越來越慘重。
-          由於被蜘蛛媽媽操縱，自身的實力比平時還要強許多，但即使身體骨折也被強制使出動作，長時間忍受著手腳各處之痛。
-          在炭治郎利用線將自己丟至樹上，將絲線纏繞擺脫控制後感到意外，但隨即遭到蜘蛛媽媽連同自己和其他隊員的頭部扭斷。　
-          其死亡引出了原先平靜的炭治郎的憤怒，對於輕易奪取人命的行為感到氣憤。
-        </div>
-      </div>
-
-      <div class="intro_main fade" id="intro_kanao">
-        <h1>栗花落 カナヲ</h1>
-        <div>
-          <h3>過去</h3>
-          幼時過著飽受虐待的日子，但因視覺敏銳而得以避開不被打到自身要害，也因此不敢輕易表達自身的情感，後被販賣並被胡蝶香奈惠及胡蝶忍所救。
-          不擅長做主，但從香奈惠那兒學到了擲硬幣決定事情的方法。在香奈惠被鬼殺害後，因為在葬禮上哭不出來而自責了許久。
-          香奈惠和忍起初不同意香奈乎加入鬼殺隊，但她將看過的花之呼吸學得有模有樣，並偷偷參加了選拔。
-
-          <h3>鬼殺隊入隊篇</h3>
-          與炭治郎在最終選拔中同樣存活的五人之一，當時身上並沒有沾到半點灰塵，也是其首次登場。
-
-          <h3>那田蜘蛛山篇</h3>
-          篇末與鬼殺隊的隱部隊前往山中搜救，並擔任隱的指揮者，遵照上級命令活捉了炭治郎與禰豆子，用一腳就將重傷的炭治郎踹到昏迷。
-
-          <h3>柱眾審判篇</h3>
-          於炭治郎等人在蝴蝶屋休養時協助進行機能恢復訓練，在炭治郎完成訓練後向香奈乎道別，並且以擲硬幣為賭注，希望香奈乎能依照自己的意志行動，對於炭治郎的舉動感到驚訝，在炭治郎的影響下也慢慢改變。
-
-          <h3>遊廓潛入作戰篇</h3>
-          遵照了自己的意志，與炭治郎成功阻止了音柱宇髓天元帶走葵。
-          在炭治郎被帶回蝴蝶屋治療後的兩個月，是第一個發現炭治郎清醒的人。
-          發現炭治郎清醒後落淚，並靜靜坐在炭治郎旁邊一陣子。把盤子摔落在地而不管不顧，後被前來探望的後藤稍微教訓了一下，告知與階級無關，由於大家很擔心的緣故，應該快點通知大家炭治郎清醒的消息。在病房內變得熱鬧後，炭治郎因放心而睡著，由於眾人太過騷亂而主動出聲讓大家安靜一些。（一周後炭治郎康復）
-
-          <h3>柱指導訓練篇</h3>
-          在胡蝶忍回來蝴蝶屋後前來探訪忍，當時正準備前往風柱處進行訓練，
-          得知忍沒有參加這次指導後有些沮喪，並對忍表示自己想和師傅練習，這讓忍覺得很欣慰。
-          後被忍告知了如何殺死殺害姐姐胡蝶香奈惠的鬼的方法。
-
-          <h3>無限城決戰篇</h3>
-          <h4>香奈乎&伊之助 vs.上弦之貳·童磨</h4>
-          進入無限城後目睹了恩人胡蝶忍被上弦之貳童磨殺害並吸收，與伊之助合力對抗童磨，被童磨認為實力超過了蟲柱胡蝶忍。
-          在童磨因胡蝶忍留在體內的劇毒發作之後，使用了「花之呼吸·終之型·彼岸朱眼」看穿了童磨的血鬼術，並和伊之助協力將其斬首，但右眼也因此失明。
-          將童磨擊敗後找到了忍的髮飾，回想起兩位義姐後落淚。隨後攙扶著同樣淚流滿面的伊之助前往其他戰場中。
-          其後與伊之助同村田和善逸奇蹟似會面，無限城崩塌前夕感受到劇烈的震動，採以備戰姿態。
-
-          <h4>眾人vs.鬼王·鬼舞辻無慘</h4>
-          柱與無慘交戰時，與伊之助和善逸使用了愈史郎的血鬼術隱身參戰，在符咒被無慘切開後出現（此時香奈乎的髮飾已換成了忍的），後與三人持續使用伊之助撿來的符咒隱身戰鬥。
-          在無慘爆發後成為唯一的輕傷者，但由於恐懼而無法移動雙腿，在要被無慘攻擊時，被炭治郎所救，後被託付給隱的成員照顧。
-
-          <h4>鬼王</h4>
-          看見鬼化的炭治郎與禰豆子糾纏的場景，回想到忍為防止禰豆子變回人失敗，給自己多一份的備份藥，意識到自己還留有一隻眼的意義，隨即再次使用了彼岸朱眼，身體被炭治郎刺穿後同時為炭治郎注射了能變回人的藥物。
-        </div>
-      </div>
-
-      <div class="intro_main fade" id="intro_chutaro">
-        <h1>うこぎ／チュン太郎</h1>
-        <div>
-          <ul style="list-style-type: square;">
-            <li>鬼殺隊所屬的鎹雀。</li>
-            <li>善逸的鎹雀，本名五加木（うこぎ）。</li>
-            <li>被善逸取名為啾太郎（チュン太郎），負責傳達任務給善逸。</li>
-            <li>因家人被鬼殺死而加入的鬼殺隊鬼連麻雀也不放過</li>
-            <li>由於不會說人話而無法傳達給善逸，但能跟炭治郎溝通。</li>
-            <li>
-              常常被善逸的行為困擾著，有時也會與善逸吵架，用嘴攻擊善逸的手。
-            </li>
-            <li>
-              在那田蜘蛛山時，當善逸感到害怕時飛往其頭上，並且在善逸遇上蜘蛛鬼哥哥時，沒有飛走，而是躲進了善逸的衣中，陪伴著善逸。後來幫前來支援的蟲柱胡蝶忍指引善逸的所在地。
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- Intro content END -->
     </div>
 
+    <!-- back to top button -->
+    <button onclick="backToTop()" id="backToTopBtn">Top</button>
+    
     <footer>
-      <div class="ft_btn">
-        <ul class="ft_list">
-          <li class="ft_Item"><a href="./index.html">Index</a></li>
-          <li class="ft_Item"><a href="#">Question</a></li>
-          <li class="ft_Item"><a href="#">Credit</a></li>
-          <li class="ft_Item"><a href="#">Contact</a></li>
-        </ul>
-      </div>
+        <div class="ft_btn">
+            <ul class="ft_list">
+                <li class="ft_Item"><a href="./index.html">Index</a></li>
+                <li class="ft_Item"><a href="#">Question</a></li>
+                <li class="ft_Item"><a href="#">Credit</a></li>
+                <li class="ft_Item"><a href="#">Contact</a></li>
+            </ul>
+        </div>
     </footer>
-  </body>
+</body>
+
 </html>
