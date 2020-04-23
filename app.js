@@ -37,10 +37,16 @@ function showSlides(n) {
 // SlideShow JS END
 
 //Loading animation
-
-function my_Function() {
+function Loading_animation() {
     var perloader = document.getElementById('loader');
-    perloader.style.display = 'none';
+    var topNav = document.getElementById("topNav");
+    topNav.className = "";
+    // topNav.style.display = "none"; 
+    setTimeout(() => { 
+        perloader.style.display = 'none'; 
+        topNav.className = "topNav"
+        topNav.style.display = "block"; 
+    }, 2000);
 }
 
 // text content of character info
@@ -131,3 +137,7 @@ const navSlide = () => {
 
 }
 navSlide();
+
+window.onload = function() {
+    Loading_animation();
+}

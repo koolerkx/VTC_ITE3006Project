@@ -175,13 +175,48 @@ nav {
 #loader {
     position: fixed;
     width: 100%;
-    height: 100vh;
-    background-image: url(./src/loading.gif), url(./src/loading_bg.png);
-    background-position: center, unset;
-    background-repeat: no-repeat, repeat;
+    height: 100%;
+    /* background-image: url(./src/loading.gif), url(./src/loading_bg.png); */
+    background-image: url(./src/loading_bg.png);
+    background-position: unset;
+    background-repeat: repeat;
     z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
+.loading_netuko {
+    -webkit-animation: laod 2000ms ease-in-out;
+    animation: laod 2200ms ease-in-out;
+}
+
+/* animation from  left to right*/
+@-webkit-keyframes fade {
+    from {
+        transform: scale(-0.5, 0.5);
+        margin-left: -30%;
+    }
+
+    to {
+        transform: scale(-1.5, 1.5);
+        margin-left: 30%;
+    }
+}
+
+@keyframes laod {
+    from {
+        transform: scale(-0.5, 0.5);
+        margin-left: -30%;
+    }
+
+    to {
+        transform: scale(-1.5, 1.5);
+        margin-left: 30%;
+    }
+}
 
 .character_img {
     display: none
