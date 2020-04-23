@@ -2,8 +2,9 @@
     --color1: #5d4954;
     --color2: #6C57F2;
     --color3: #6452D9;
-    --color4: #9591F2;  
-    --color5: #0F0E0E;  /* background */
+    --color4: #9591F2;
+    --color5: #0F0E0E;
+    /* background */
 }
 
 * {
@@ -22,7 +23,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover; */
 
-    background-color: var(--color5); 
+    background-color: var(--color5);
 
     text-align: center;
     color: white;
@@ -30,20 +31,22 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
     text-align: center;
 }
+
 /* NAV Bar CSS Start*/
 
 .topNav {
     position: fixed;
     top: 0;
     width: 100%;
-    
+
     height: 100px;
 
     background-color: var(--color1);
@@ -65,17 +68,17 @@ html, body {
 }
 
 nav {
-    float: right;
+    float: none;
     margin-right: 150px;
 }
 
-nav ul {
+.nav-links ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-nav li {
+.nav-links li {
     display: inline-block;
     margin-left: 80px;
     padding-top: 35px;
@@ -83,18 +86,19 @@ nav li {
     position: relative;
 }
 
-nav a {
+.nav-links a {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: x-large;
+    font-family: myWord, cursive;
+    font-size: xx-large;
 }
 
-nav a:hover {
+.nav-links a:hover {
     color: var(--color4);
 }
 
-nav a::after {
+.nav-links a::after {
     content: '';
     display: block;
     height: 5px;
@@ -103,13 +107,62 @@ nav a::after {
 
     position: absolute;
     width: 0px;
+    left: 50%;
 
     transition: all ease-in-out 250ms;
 }
 
-nav a:hover::after {
+.nav-links a:hover::after {
     width: 100%;
+    left: 0%;
 }
+
+/*right side of the Navbar*/
+.smallNav {
+    float: right;
+    display: none;
+    cursor: pointer;
+}
+
+.smallNav div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+@media screen and (max-width:1200px) {
+    .smallNav {
+        margin: 30px 0 0 0;
+    }
+
+    .nav-links li {
+        margin: 30px 20px;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 90vh;
+        top: 100px;
+        background-image: url(./src/fujinohana01.png);
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .smallNav {
+        display: block;
+    }
+}
+
+.nav-active {
+
+    transform: translateX(0%);
+}
+
 
 /* NAV Bar Css END */
 
@@ -117,7 +170,7 @@ nav a:hover::after {
     display: none
 }
 
-.character_img img{
+.character_img img {
     height: 600px;
 }
 
@@ -133,14 +186,15 @@ nav a:hover::after {
     position: relative;
 
     max-width: 1000px;
-        
+
     /* display: flex;
     justify-content: center; */
 }
 
 /* Next & previous buttons */
 
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 100%;
@@ -174,7 +228,8 @@ nav a:hover::after {
 
 /* On hover, add a black background color with a little bit see-through */
 
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
     background-color: var(--color1);
 }
 
@@ -205,7 +260,8 @@ nav a:hover::after {
     transition: background-color 150ms ease;
 }
 
-.active, .slides_dot:hover {
+.active,
+.slides_dot:hover {
     background-color: var(--color1);
 }
 
@@ -224,6 +280,7 @@ nav a:hover::after {
     margin-right: 5%;
     margin-bottom: 20px;
     font-size: large;
+    font-family: mainWord;
 
     /* content */
     letter-spacing: 3px;
@@ -237,7 +294,9 @@ h1 {
 }
 
 h2 {
-    line-height: 300%;;
+    line-height: 300%;
+    font-size: xxx-large;
+    font-family: myWord, cursive;
 }
 
 .intro_speak {
@@ -260,7 +319,9 @@ h2 {
     opacity: 1;
 }
 
-#intro_chutaro, #intro_kanao, #intro_ozaki{
+#intro_chutaro,
+#intro_kanao,
+#intro_ozaki {
     display: none;
     opacity: 0;
 }
@@ -278,33 +339,46 @@ button {
     animation-name: fade;
     animation-duration: 1.5s;
 }
-  
+
 @-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
-  
+
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 /* back to top button */
 #backToTopBtn {
     /* Ref: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
     /* default none, scoll to show */
-    display: none;  
+    display: none;
 
     /* opacity: 0; */
 
     /* position */
     position: fixed;
     bottom: 50px;
-    right: 50px;   
+    right: 50px;
 
-    z-index: 99;    /* not overlap */
-    border: none;   /* clear border */
-    outline: none;  /* clear outline */
+    z-index: 99;
+    /* not overlap */
+    border: none;
+    /* clear border */
+    outline: none;
+    /* clear outline */
 
     background-color: var(--color1);
     color: white;
@@ -323,7 +397,8 @@ button {
     background-color: #624dbf;
 }
 
-.ft_list, .ft_Item {
+.ft_list,
+.ft_Item {
     margin: 10px;
     font-size: 20px;
     text-align: center;
@@ -340,7 +415,7 @@ button {
 
 footer {
     margin-top: 30px;
-    
+
     display: flex;
     justify-content: center;
 
@@ -357,8 +432,20 @@ footer a {
     font-size: 20px;
 }
 
+@font-face {
+    font-family: myWord;
+    src: url(./font/HanyiSentyFlorCalligraphy.ttf)
+}
+
+@font-face {
+    font-family: mainWord;
+    src: url(./font/tetai-2.ttf);
+}
+
 @media screen and (max-width: 1200px) {
-    .next, .prev {
+
+    .next,
+    .prev {
         display: none;
     }
 
@@ -366,4 +453,3 @@ footer a {
         width: 90%;
     }
 }
-
