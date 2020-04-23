@@ -1,6 +1,3 @@
-
-
-
 // Back to top Button function
 /* Ref: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
 backToTopBtn = document.getElementById("backToTopBtn");
@@ -41,8 +38,6 @@ function closeNav() {
 const navSlide = () => {
     const smallNav = document.querySelector('.smallNav');
     const nav = document.querySelector('.nav-links');
-
-
 
     smallNav.addEventListener('click', () => {
         //Toggle Nav

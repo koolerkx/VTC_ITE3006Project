@@ -132,7 +132,7 @@ for (var i = 0; i < acc.length; i++) {
 
 
 
-// Canvas Detect Click and drag processzAAZz
+// Canvas Detect Click and drag process
 // Edit From: https://riptutorial.com/zh-TW/html5-canvas/example/18918/%E5%9C%A8-%E7%95%AB%E5%B8%83-%E5%91%A8%E5%9C%8D%E6%8B%96%E5%8B%95%E5%9C%93%E5%BD%A2%E5%92%8C%E7%9F%A9%E5%BD%A2
 
 // save relevant info about shapes drawn on the canvas
@@ -295,6 +295,7 @@ function handleMouseMove(e) {
     startY = mouseY;
 }
 
+// the font for canvas componet
 var fontList = [
     "Comic Sans MS",
     "Arial Black",
@@ -344,7 +345,7 @@ function drawAll() {
 
 // Canvas Objectpara Input
 
-// Sync Side bar and Text Input
+// Side bar and Text Input
 var slider = [
     document.getElementById("degreeInputRange"),
     document.getElementById("bear"),
@@ -662,6 +663,7 @@ function rePara() {
     }
 }
 
+// Componet Add button, onclick
 function rectAdd() {
     shapes.push({ type: "rect", x: 50, y: 50, width: 200, height: 200, degree: 0, color: "#FFFFFF" })
     drawAll();
