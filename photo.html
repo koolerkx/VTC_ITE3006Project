@@ -1,45 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="CSS.css" />
-    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="photo.css" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="photo.js" defer></script>
+    <script src="utility.js" defer></script>
 
 </head>
-<body>
-   
-    <div class="topNav">
-        <a href="./index.html"><img src="./src/logo.png" alt="Logo" class="navLogo"></a>
 
-        <nav >
-            <ul>
+<body>
+
+    <div class="topNav" id="topNav">
+        <a href="./index.html"><img src="./src/logo.png" alt="Logo" class="navLogo" /></a>
+
+        <nav>
+            <ul class="nav-links">
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./koukyuu.html">呼吸</a></li>
-                <li><a href="">?_?</a></li>
+                <li><a href="./photo.html">写真編集</a></li>
                 <li><a href="">Credit</a></li>
                 <li><a href="">Contact</a></li>
             </ul>
-        </nav>
 
+            <div class="smallNav">
+                <div class="line1"></div>
+                <div class="line1"></div>
+                <div class="line1"></div>
+            </div>
+        </nav>
     </div>
 
-    
+    <input type="button" value="" id="bear" style="display: none;">
+
+    <div class="container">
+
+        <div class="topButton">
+            <button class="resetBtn" onclick="reset()">Reset</button>
+            <button class="downloadBtn" onclick="saveFile()">Download Image</button>
+            <a href="" id="download"></a>
+        </div>
+
+        <div class="dropzone" id="dropzone">
+            Drag the image here <br>
+            or Click the button below <br>
+            to upload
+            <input type="file" name="imgInput" id="imgInput" onchange="canvasLoadImg(this)">
+        </div>
+
+        <div class="canvasZone">
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <!-- Canvas Meun -->
+        <button class="accordion">Canvas Componet Menu</button>
+        <div class="panel">
+            <div class="canvasMenu_topBar">
+                <button class="canvasMenu_add" id="addText" onclick="textAdd()">Add Text</button>
+                <input type="text" name="textToAdd" id="addText_textToAdd" class="canvasMenu_add"
+                    placeholder="(Text to Add)" value="10">
+                <button class="canvasMenu_add" id="addRect" onclick="rectAdd()">Add Rect</button>
+                <button class="canvasMenu_add" id="addCircle" onclick="circleAdd()">Add Circle</button>
+                <button class="canvasMenu_add" id="remove" onclick="remove()">Remove</button>
+            </div>
+
+            <div class="canvasMenu_para">
+
+                <!-- Degree -->
+                <!-- <span class="paraLabel">Degree:</span>
+                  <input type="range" id="degreeInputRange" value="0" min="0" max="360" oninput="degreeOnInputRange()">
+                  <input type="number" id="degreeInputText" value="0"min="0" max="360" onchange="degreeOnChangeText()"> -->
+
+                <!-- Color -->
+                <span class="paraLabel">Color:</span>
+                <input type="color" id="colorInputColor" value="#A5A5A5" oninput="colorOnInputText()"
+                    onchange="colorOnChangeText()">
+                <br>
+
+                <!-- Position X -->
+                <span class="paraLabel">Position X:</span>
+                <input type="range" id="posXInputRange" value="50" min="1" max="800" oninput="posXOnInputRange()">
+                <input type="number" id="posXInputText" value="50" min="1" max="800" onchange="posXOnChangeText()">
+
+                <!-- Position Y -->
+                <span class="paraLabel">Position Y:</span>
+                <input type="range" id="posYInputRange" value="50" min="1" max="800" oninput="posYOnInputRange()">
+                <input type="number" id="posYInputText" value="50" min="1" max="800" onchange="posYOnChangeText()">
+                <br>
+
+                <!-- Width -->
+                <span class="paraLabel">Width:</span>
+                <input type="range" id="widthInputRange" value="200" min="1" max="800" oninput="widthOnInputRange()">
+                <input type="number" id="widthInputText" value="200" min="1" max="800" onchange="widthOnChangeText()">
+
+                <!-- Height -->
+                <span class="paraLabel">Height:</span>
+                <input type="range" id="heightInputRange" value="200" min="1" max="1000" oninput="heightOnInputRange()">
+                <input type="number" id="heightInputText" value="200" min="1" max="1000"
+                    onchange="heightOnChangeText()">
+                <br>
+
+                <!-- radius -->
+                <span class="paraLabel">Radius:</span>
+                <input type="range" id="radiusInputRange" value="200" min="1" max="400" oninput="radiusOnInputRange()">
+                <input type="number" id="radiusInputText" value="200" min="1" max="400" onchange="radiusOnChangeText()">
+
+                <!-- fontSize -->
+                <span class="paraLabel">FontSize:</span>
+                <input type="range" id="fzInputRange" value="10" min="10" max="200" oninput="fzOnInputRange()">
+                <input type="number" id="fzInputText" value="10" min="10" max="200" onchange="fzOnChangeText()">
+                <br>
+
+                <!-- font -->
+                <span class="paraLabel">Font:</span>
+                <select id="fontInputSelect" onchange="fontOnChangeText()">
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                    <option value="Courier New">Courier New Mono</option>
+                </select>
+
+                <!-- content -->
+                <span class="paraLabel">Content:</span>
+                <input type="text" id="contentInputText" value="" onchange="contentOnChangeText()">
+
+
+            </div>
+
+        </div>
+
+
 
         <!-- back to top button -->
-    <button onclick="backToTop()" id="backToTopBtn">Top</button>
-    
-    <footer>
-        <div class="ft_btn">
-            <ul class="ft_list">
-                <li class="ft_Item"><a href="./index.html">Index</a></li>
-                <li class="ft_Item"><a href="#">Question</a></li>
-                <li class="ft_Item"><a href="#">Credit</a></li>
-                <li class="ft_Item"><a href="#">Contact</a></li>
-            </ul>
-        </div>
-    </footer>
+        <button onclick="backToTop()" id="backToTopBtn">Top</button>
+
+        <footer>
+            <div class="ft_btn">
+                <ul class="ft_list">
+                    <li class="ft_Item"><a href="./index.html">Index</a></li>
+                    <li class="ft_Item"><a href="#">Question</a></li>
+                    <li class="ft_Item"><a href="#">Credit</a></li>
+                    <li class="ft_Item"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </footer>
 </body>
+
 </html>
