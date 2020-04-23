@@ -31,6 +31,10 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 html,
 body {
     width: 100%;
@@ -165,8 +169,19 @@ nav {
     transform: translateX(0%);
 }
 
-
 /* NAV Bar Css END */
+
+/*Loading page*/
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-image: url(./src/loading.gif), url(./src/loading_bg.png);
+    background-position: center, unset;
+    background-repeat: no-repeat, repeat;
+    z-index: 1000;
+}
+
 
 .character_img {
     display: none
@@ -393,7 +408,7 @@ button {
     font-weight: bold;
     text-align: center;
 
-    /* transition-duration: 500ms; */
+     transition-duration: 2s; 
 }
 
 #backToTopBtn:hover {

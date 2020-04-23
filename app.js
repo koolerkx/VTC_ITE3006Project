@@ -36,6 +36,13 @@ function showSlides(n) {
 }
 // SlideShow JS END
 
+//Loading animation
+
+function my_Function() {
+    var perloader = document.getElementById('loader');
+    perloader.style.display = 'none';
+}
+
 // text content of character info
 contentIndex = 0;
 var content = [
