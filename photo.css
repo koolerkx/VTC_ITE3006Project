@@ -27,7 +27,7 @@ body {
     border-radius: 15%;
     background-color: rgba(149, 145, 242, 0.3);
     opacity: 100%;
-    
+
     margin: auto;
     /* margin-top: 200px; */
 
@@ -47,13 +47,15 @@ body {
     animation: dragOver 1000ms infinite;
 }
 
-@keyframes dragOver{
+@keyframes dragOver {
     0% {
         background-color: rgba(149, 145, 242, 0.3);
     }
+
     50% {
         background-color: rgba(108, 87, 242, 0.5);
     }
+
     100% {
         background-color: rgba(149, 145, 242, 0.3);
     }
@@ -70,12 +72,6 @@ body {
     display: none;
 }
 
-.container {
-    text-align: center;
-    align-items: center;
-
-    margin-top: 200px;
-}
 
 .topButton button {
     margin: 20px;
@@ -90,7 +86,7 @@ body {
 
 .canvasZone {
     /* border: 1px solid #000; */
-    margin: auto;  
+    margin: auto;
     margin-top:
 }
 
@@ -99,7 +95,7 @@ canvas {
 }
 
 /* https://www.w3schools.com/howto/howto_js_accordion.asp */
-.accordion{
+.accordion {
     background-color: #eee;
     color: #444;
     cursor: pointer;
@@ -115,13 +111,14 @@ canvas {
     font-size: large;
 }
 
-.accordion_active, .accordion:hover {
+.accordion_active,
+.accordion:hover {
     background-color: #ccc;
 }
 
 .panel {
     padding: 0 18px;
-    background-color: var(--color1) ;
+    background-color: var(--color1);
 
     width: 80%;
     margin: auto;
@@ -156,7 +153,8 @@ canvas {
 
 }
 
-.paraLabel, input[type="number"] {
+.paraLabel,
+input[type="number"] {
     font-size: medium;
 }
 
@@ -188,4 +186,3 @@ input[type="color"] {
 #contentInputText {
     width: 27%;
 }
-
