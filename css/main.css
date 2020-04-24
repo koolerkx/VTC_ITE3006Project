@@ -1,0 +1,407 @@
+:root {
+    --color1: #5d4954;
+    --color2: #6C57F2;
+    --color3: #6452D9;
+    --color4: #9591F2;
+    --color5: #0F0E0E;
+    /* background */
+}
+
+@font-face {
+    font-family: tetai;
+    src: url(../font/tetai-2.ttf);
+}
+
+@font-face {
+    /* 源流明體 */
+    font-family: zh_content01;
+    src: url(../font/GenRyuMin-H.ttc)
+}
+
+@font-face {
+    /* 魚石行書 */
+    font-family: yuShi;
+    src: url(../font/YuShiXingShu-2.ttf);
+}
+
+@font-face {
+    /* KSW栄泉お試し教育漢字 */
+    font-family: Ksweisentrial;
+    src: url(../font/Ksweisentrial-0-2.ttf);
+}
+
+@font-face {
+    /* seto font */
+    font-family: seto;
+    src: url(../font/setofont.ttf);
+}
+
+@font-face {
+    /*衡山毛筆フォント草書*/
+    font-family: Kouzan;
+    src: url(./font/KouzanMouhituFontOTF.otf);
+}
+
+@font-face {
+    /*はんなり明朝*/
+    font-family: Hannari;
+    src: url(./font/Hannari.otf);
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Kouzan;
+
+}
+
+body {
+    background: url(../src/bg/background_fujinohana.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    background-attachment: fixed;
+    /* background: url(./src/ep11_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover; */
+
+    background-color: var(--color5);
+
+    text-align: center;
+    color: white;
+
+    /* font-family: ; */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+/* NAV Bar CSS Start*/
+
+.topNav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+
+    background-color: var(--color1);
+    background-image: url(../src/bg/fujinohana01.png);
+
+    z-index: 100;
+}
+
+.navLogo {
+    background: url(../src/utility/logo.png);
+    background-repeat: no-repeat;
+    height: 80px;
+
+    float: left;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+}
+
+
+nav {
+    float: none;
+    margin-right: 50px;
+}
+
+.nav-links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 60px;
+    padding-top: 35px;
+
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Yushi;
+    font-size: xx-large;
+}
+
+.nav-links a:hover {
+    color: var(--color4);
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: var(--color4);
+
+    left: 50%;
+
+    position: absolute;
+    width: 0px;
+    left: 50%;
+
+    transition: all ease-in-out 250ms;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0%;
+}
+
+/*right side of the Navbar*/
+.smallNav {
+    float: right;
+    display: none;
+    cursor: pointer;
+}
+
+.smallNav div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+@media screen and (max-width:1200px) {
+    .smallNav {
+        margin: 30px 20px;
+    }
+
+    .smallNav {
+        display: block;
+    }
+
+    .nav-links li {
+        margin: 30px 20px;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 90vh;
+        top: 100px;
+        background-image: url(../src/bg/fujinohana01.png);
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+}
+
+.nav-active {
+
+    transform: translateX(0%);
+}
+
+/* NAV Bar Css END */
+
+/*Loading page*/
+#loader {
+    top: 0;
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    /* background-image: url(.././src/loading.gif), url(.././src/loading_bg.png); */
+    background-image: url(../src/bg/loading_bg.png);
+    /* background-position: center; */
+    background-repeat: repeat;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    -webkit-animation: laod_div 2000ms ease-in-out;
+    animation: laod_div 2200ms ease-in-out;
+}
+
+.loading_netuko {
+    -webkit-animation: laod 2000ms ease-in-out;
+    animation: laod 2200ms ease-in-out;
+}
+
+/* animation from  left to right*/
+@-webkit-keyframes fade {
+    from {
+        transform: scale(-0.5, 0.5);
+        margin-left: -40%;
+    }
+
+    to {
+        transform: scale(-1.5, 1.5);
+        margin-left: 10%;
+    }
+}
+
+@keyframes laod {
+    from {
+        transform: scale(-0.5, 0.5);
+        margin-left: -40%;
+    }
+
+    to {
+        transform: scale(-1.5, 1.5);
+        margin-left: 10%;
+    }
+}
+
+@keyframes laod_div {
+    from {}
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* back to top button */
+#backToTopBtn {
+    /* Ref: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
+    /* default none, scoll to show */
+    display: none;
+
+    /* opacity: 0; */
+
+    /* position */
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+
+    z-index: 99;
+    /* not overlap */
+    border: none;
+    /* clear border */
+    outline: none;
+    /* clear outline */
+
+    background-color: var(--color1);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 90px;
+
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+
+    transition-duration: 2s;
+}
+
+#backToTopBtn:hover {
+    background-color: #624dbf;
+}
+
+
+/* Set the main page*/
+#container {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+/* Footer */
+.ft_btn {
+    display: flex;
+    margin: auto;
+}
+
+.ft_list,
+.ft_Item {
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+    list-style: none;
+
+    display: inline;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+
+    margin-top: 10px;
+    /* height: 5%; */
+
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--color1);
+    background-image: url(../src/bg/fujinohana02.png);
+
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.ft_Item {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.ft_list a::after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 100%;
+
+    background-color: var(--color4);
+
+    left: 50%;
+
+    position: absolute;
+    width: 0px;
+
+    transition: all ease-in-out 250ms;
+}
+
+.ft_list a:hover::after {
+    width: 100%;
+    left: 0%;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .next,
+    .prev {
+        display: none;
+    }
+
+    .intro_container {
+        width: 90%;
+    }
+}

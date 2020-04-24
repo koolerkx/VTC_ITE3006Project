@@ -1,0 +1,49 @@
+.copyRight, .techRef {
+    margin: auto;
+    text-align: center;
+
+    line-height: 2;
+    letter-spacing: 1px;
+
+    overflow-x: auto;
+}
+
+table {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    vertical-align: top;
+    text-align: left;
+
+    border-collapse: collapse;
+
+    width: 1000px;
+
+    background: rgba(0,0,0,0.5);
+}
+
+th {
+    height: 50px;
+}
+
+td, th {
+    border: 1px solid #FFF;
+}
+
+h1 {
+    margin: 10px;
+}
+
+hr {
+    width: 1000px;
+    height: 8px;
+    margin: auto;
+
+    background-color: white;
+}
+
+a:hover {
+    transition: 500ms ease-in-out;
+    background-color: #fff;
+}

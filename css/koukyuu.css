@@ -1,0 +1,281 @@
+/* #region  Scrolling animation (big picture) */
+
+/*Scrolling animation in the top*/
+
+.zoom {
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    overflow: hidden;
+    background: url(../src/character/character_zoom/water_character.png);
+    /*full size in the box*/
+    background-size: cover;
+    background-position: bottom 100%;
+    background-position: center;
+}
+
+.zoom::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    z-index: 50;
+    background: linear-gradient(transparent, rgb(147, 176, 255));
+}
+
+.zoom #layer1 {
+    position: absolute;
+    /*left: 20%;*/
+    width: 100%;
+    right: 0;
+    transform: translateX(-15%);
+    z-index: 10;
+    /*position: absolute;
+
+    transform: translateX(50%);
+    width: 50%;
+    z-index: 9;*/
+}
+
+.zoom #layer2 {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    transform: translateY(130%);
+    /* top: 800px; */
+    z-index: 10;
+}
+
+.zoom #layer3 {
+    position: absolute;
+    right: 0;
+    transform: translateX(60%);
+    width: 100%;
+    z-index: 9;
+}
+
+/*End of Scrolling animation in the top*/
+
+/*Scrolling animation in the second*/
+
+.zoom1 {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+    background: url(../src/character/character_zoom/kaminarinokokyuu.png);
+    /*full size in the box*/
+    background-size: cover;
+    background-position: center;
+    background-position: bottom 100%;
+}
+
+.zoom1 #kaminari_left {
+    position: absolute;
+    /*left: 20%;*/
+    width: 100%;
+    height: 100%;
+    right: 0;
+    /* transform: translateX(-375%); */
+    z-index: 10;
+    /*position: absolute;
+
+    transform: translateX(50%);
+    width: 50%;
+    z-index: 9;*/
+}
+
+.zoom1 #kaminari_right {
+    position: absolute;
+    right: 0;
+    /* transform: translateX(-27%); */
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+
+/* #endregion */
+
+.honoCover {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+    background: url(../src/character/character_image/hono_cover.png);
+    background-position: center;
+    /*full size in the box*/
+    background-size: cover;
+    background-position: bottom 100%;
+}
+
+/*End of Scrolling animation in the second*/
+
+.content {
+    padding: 100px;
+    box-sizing: border-box;
+    font-size: medium;
+    line-height: 2;
+    letter-spacing: 1px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.content h1 {
+    /* text-align: left; */
+    font-size: 100px;
+    font-weight: bold;
+    font-family: tetai;
+    margin-bottom: 20px;
+}
+
+.introContainer {
+    border: 2px solid white;
+    border-radius: 5%;
+    padding: 5px;
+    opacity: 0;
+    transform: translateY(30%) rotateZ(-5deg);
+    transition: transform 4s .25s cubic-bezier(0, 1, .3, 1), opacity .3s .25s ease-out;
+    /* width: 90%; */
+    will-change: transform, opacity;
+}
+
+.introContainer.is-visible {
+    opacity: 1;
+    transform: rotateZ(3deg);
+}
+
+/* background of each introContainer */
+
+.content_pt1 .introContainer {
+    background-color: rgba(147, 176, 225, 0.2);
+    transform: rotate(-2deg);
+}
+
+.content_pt2 .introContainer {
+    background-color: rgba(233, 179, 70, 0.2);
+}
+
+.content_pt3 .introContainer {
+    background-color: rgba(239, 96, 50, 0.2);
+    transform: rotate(-2deg) ;
+}
+
+/* font texure */
+
+.mizunokoukyuu {
+    background: url(../src/texture/water_texture.png);
+    background-position: center;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.kaminarinokoukyuu {
+    background: url(../src/texture/kaminari_texture.png);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hononokyoukyuu {
+    background: url(../src/texture/hono_texture.png);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/*Srolling to show the photo or disappear*/
+
+.inline-photo {
+    border: 20px solid #fff;
+    border-bottom: 60px solid #fff;
+    border-radius: px;
+    box-shadow: 1em 1em 3em .25em var(--color3);
+    margin-right: 5%;
+    max-width: 500px;
+    opacity: 0;
+    transform: translateY(30%) rotateZ(-5deg);
+    transition: transform 4s .25s cubic-bezier(0, 1, .3, 1), opacity .3s .25s ease-out;
+    width: 90%;
+    will-change: transform, opacity;
+
+    z-index: 10;
+}
+
+.inline-photo.is-visible {
+    opacity: 1;
+    transform: rotateZ(-2deg);
+}
+
+.content_pt1 .inline-photo {
+    transform: rotateZ(5deg);
+    box-shadow: 1em 1em 3em .25em rgb(147, 176, 225);
+    margin-right: 0;
+    margin-left: 5%;
+}
+
+.content_pt2 .inline-photo {
+    box-shadow: 1em 1em 3em .25em rgb(233, 179, 70);
+}
+
+.content_pt3 .inline-photo {
+    box-shadow: 1em 1em 3em .25em rgb(239, 96, 50);
+    height: 500px;
+    width: 500px;
+    transform: rotateZ(5deg);
+    margin-right: 0;
+    margin-left: 5%;
+}
+
+#container_kyokyuu {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+.notSupport{
+    display: none;
+}
+
+@media screen and (max-width:1200px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .zoom, .zoom1 {
+        display: none;
+    }
+    .inline-photo {
+        margin: 50px;
+        width: 500px;
+    }
+    .introContainer {
+        margin-top: 80px;
+        width: 500px;
+    }
+
+    .honoCover {
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #container_kyokyuu{
+        display: none;
+    }
+
+    .notSupport {
+        margin-top: 200px;
+        display: block;
+        color: white;
+        /* background-color: white; */
+    }
+}
+
