@@ -1,3 +1,18 @@
 .topBlock {
     margin-top: 200px;
+    display: block;
 }
+
+h1 {
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+
+
+.person img, .person .personInfo{
+    display: inline-block;
+    width: 30%;
+}
+
+
