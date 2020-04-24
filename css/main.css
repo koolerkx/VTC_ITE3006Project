@@ -53,8 +53,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: Kouzan;
-
 }
 
 body {
@@ -71,6 +69,8 @@ body {
 
     text-align: center;
     color: white;
+
+    font-family: tetai;
 
     /* font-family: ; */
 }
@@ -350,6 +350,7 @@ footer {
 
     margin-top: 10px;
     /* height: 5%; */
+    height: 50px;
 
     display: flex;
     justify-content: center;

@@ -300,7 +300,11 @@ var fontList = [
     "Comic Sans MS",
     "Arial Black",
     "Lucida Sans Unicode",
-    "Courier New"
+    "Courier New",
+    "Seto",
+    "yuShi",
+    "Tetai",
+    "Hannari"
 ]
 
 // clear the canvas and redraw all shapes

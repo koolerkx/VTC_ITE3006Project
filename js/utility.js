@@ -48,3 +48,7 @@ const navSlide = () => {
 }
 navSlide();
 
+window.onload = function() {
+    topNav.className = "topNav"
+    topNav.style.display = "block"; 
+}

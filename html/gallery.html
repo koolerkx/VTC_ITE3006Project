@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/gallery.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <script src="../js/gallery.js" defer></script>
+    <script src="../js/utility.js" defer></script>
+</head>
+
+<body>
+    <div class="topNav" id="topNav">
+        <a href="../index.html"><img src="../src/utility/logo.png" alt="Logo" class="navLogo" /></a>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./koukyuu.html">呼吸</a></li>
+                <li><a href="./photo.html">写真編集</a></li>
+                <li><a href="./credit.html">Credit</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+
+            <div class="smallNav">
+                <div class="line1"></div>
+                <div class="line1"></div>
+                <div class="line1"></div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="container">
+
+        <div id="loader_gallery">
+        </div>
+
+        <h1>写真集</h1>
+        <hr>
+
+        <!-- <div class="bigPicture" id="bigPicture">
+            <img id="bigPictureImg" src="../src/character/character_image/BD_DVD_01.jpg" alt="">
+        </div> -->
+
+        <div class="grid-container">
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        BDDVD 第1巻<br>
+                        特典
+                    </p>
+                </div>
+                <img class='grid-item grid-item-1' src='../src/character/character_image/BD_DVD_01.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        BDDVD 第2巻<br>
+                        特典
+                    </p>
+                </div>
+                <img class='grid-item grid-item-2' src='../src/character/character_image/BD_DVD_02.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        BDDVD 第3巻<br>
+                        特典
+                    </p>
+                </div>
+                <img class='grid-item grid-item-3' src='../src/character/character_image/BD_DVD_03.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        BDDVD 第4巻<br>
+                        特典
+                    </p>
+                </div>
+                <img class='grid-item grid-item-4' src='../src/character/character_image/BD_DVD_04.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        BDDVD 第5巻<br>
+                        特典
+                    </p>
+                </div>
+                <img class='grid-item grid-item-5' src='../src/character/character_image/BD_DVD_05.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        BDDVD 第6巻<br>
+                        特典
+                    </p>
+                </div>
+                <img class='grid-item grid-item-6' src='../src/character/character_image/BD_DVD_06.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        BDDVD 第7巻<br>
+                        特典
+                    </p>
+                </div>
+                <img class='grid-item grid-item-7' src='../src/character/character_image/BD_DVD_07.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        BDDVD 第8巻<br>
+                        特典
+                    </p>
+                </div>
+                <img class='grid-item grid-item-8' src='../src/character/character_image/BD_DVD_08.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        BDDVD 第9巻<br>
+                        特典
+                    </p>
+                </div>
+                <img class='grid-item grid-item-9' src='../src/character/character_image/BD_DVD_09.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        BDDVD 第10巻<br>
+                        特典
+                    </p>
+                </div>
+                <img class='grid-item grid-item-10' src='../src/character/character_image/BD_DVD_10.jpg' alt=''>
+            </div>
+
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        炎柱<br>煉獄 杏寿郎
+                    </p>
+                </div>
+                <img class='grid-item grid-item-11' src='../src/character/character_image/fire.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        花の呼吸<br>
+                        終ノ型 <br>
+                        彼岸朱眼
+                    </p>
+                </div>
+                <img class='grid-item grid-item-12' src='../src/character/character_image/hana_syu.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        ヒノカミ神楽<br>
+                        碧羅の天
+                    </p>
+                </div>
+                <img class='grid-item grid-item-13' src='../src/character/character_image/hinokamikagura.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        炎柱<br>煉獄 杏寿郎
+                    </p>
+                </div>
+                <img class='grid-item grid-item-14' src='../src/character/character_image/hono_cover.png' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        炎柱<br>煉獄 杏寿郎
+                    </p>
+                </div>
+                <img class='grid-item grid-item-15' src='../src/character/character_image/hono_cover2.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        竈門炭治郎
+                    </p>
+                </div>
+                <img class='grid-item grid-item-16' src='../src/character/character_image/img_chara_01.jpg' alt=''>
+            </div>
+
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        竈門禰豆子
+                    </p>
+                </div>
+                <img class='grid-item grid-item-17' src='../src/character/character_image/img_chara_02.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        我妻善逸
+                    </p>
+                </div>
+                <img class='grid-item grid-item-18' src='../src/character/character_image/img_chara_03.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        嘴平伊之助
+                    </p>
+                </div>
+                <img class='grid-item grid-item-19' src='../src/character/character_image/img_chara_04.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        冨岡義勇
+                    </p>
+                </div>
+                <img class='grid-item grid-item-20' src='../src/character/character_image/img_chara_05.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>鱗滝左近次</p>
+                </div>
+                <img class='grid-item grid-item-21' src='../src/character/character_image/img_chara_06.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        錆兎
+                    </p>
+                </div>
+                <img class='grid-item grid-item-22' src='../src/character/character_image/img_chara_07.jpg' alt=''>
+            </div>
+
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        真菰
+                    </p>
+                </div>
+                <img class='grid-item grid-item-23' src='../src/character/character_image/img_chara_08.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        鎹鴉
+                    </p>
+                </div>
+                <img class='grid-item grid-item-24' src='../src/character/character_image/img_chara_13.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        鋼鐡塚
+                    </p>
+                </div>
+                <img class='grid-item grid-item-25' src='../src/character/character_image/img_chara_10.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        珠世
+                    </p>
+                </div>
+                <img class='grid-item grid-item-26' src='../src/character/character_image/img_chara_17.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        愈史郎
+                    </p>
+                </div>
+                <img class='grid-item grid-item-27' src='../src/character/character_image/img_chara_18.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        胡蝶しのぶ
+                    </p>
+                </div>
+                <img class='grid-item grid-item-28' src='../src/character/character_image/img_chara_22.jpg' alt=''>
+            </div>
+
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        善逸の師匠
+                    </p>
+                </div>
+                <img class='grid-item grid-item-29' src='../src/character/character_image/img_chara_28.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        栗花落カナヲ
+                    </p>
+                </div>
+                <img class='grid-item grid-item-30' src='../src/character/character_image/img_chara_29.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        煉󠄁獄杏寿郎
+                    </p>
+                </div>
+                <img class='grid-item grid-item-31' src='../src/character/character_image/img_chara_30.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        宇髄天元
+                    </p>
+                </div>
+                <img class='grid-item grid-item-32' src='../src/character/character_image/img_chara_31.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        甘露寺蜜璃
+                    </p>
+                </div>
+                <img class='grid-item grid-item-33' src='../src/character/character_image/img_chara_32.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        時透無一郎
+                    </p>
+                </div>
+                <img class='grid-item grid-item-34' src='../src/character/character_image/img_chara_33.jpg' alt=''>
+            </div>
+
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        悲鳴嶼行冥
+                    </p>
+                </div>
+                <img class='grid-item grid-item-35' src='../src/character/character_image/img_chara_34.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        伊黒小芭内
+                    </p>
+                </div>
+                <img class='grid-item grid-item-36' src='../src/character/character_image/img_chara_35.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        不死川実弥
+                    </p>
+                </div>
+                <img class='grid-item grid-item-37' src='../src/character/character_image/img_chara_36.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        白髪
+                    </p>
+                </div>
+                <img class='grid-item grid-item-38' src='../src/character/character_image/img_chara_12.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        黒髪
+                    </p>
+                </div>
+                <img class='grid-item grid-item-39' src='../src/character/character_image/img_chara_11.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        雷の呼吸<br>
+                        壱ノ型<br>
+                        霹靂一閃
+                    </p>
+                </div>
+                <img class='grid-item grid-item-40' src='../src/character/character_image/kaminari_1.png' alt=''>
+            </div>
+
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        雷の呼吸<br>
+                        漆ノ型<br>
+                        火雷神
+                    </p>
+                </div>
+                <img class='grid-item grid-item-41' src='../src/character/character_image/kaminari_7.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        鬼滅の刃
+                    </p>
+                </div>
+                <img class='grid-item grid-item-42' src='../src/character/character_image/kimetunoyaiba_01.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        水の呼吸<br>
+                        肆ノ型<br>
+                        打ち潮
+                    </p>
+                </div>
+                <img class='grid-item grid-item-43' src='../src/character/character_image/mizu_4.jpeg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        水の呼吸<br>
+                        拾ノ型<br>
+                        生生流転
+                    </p>
+                </div>
+                <img class='grid-item grid-item-44' src='../src/character/character_image/mizu_10.png' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        水の呼吸<br>
+                        拾壱ノ型<br>
+                        凪
+                    </p>
+                </div>
+                <img class='grid-item grid-item-45' src='../src/character/character_image/mizu_11_nagi.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        水の呼吸<br>
+                        拾壱ノ型<br>
+                        凪
+                    </p>
+                </div>
+                <img class='grid-item grid-item-46' src='../src/character/character_image/mizu_11_nagi2.jpg' alt=''>
+            </div>
+
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        月之呼吸<br>
+                        陸ノ型<br>
+                        常世孤月 <br> ・ <br> 無間
+                    </p>
+                </div>
+                <img class='grid-item grid-item-47' src='../src/character/character_image/tuki_6.png' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        鬼滅の刃
+                    </p>
+                </div>
+                <img class='grid-item grid-item-48' src='../src/character/character_image/kimetunoyaiba_02.jpg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        鬼滅の刃
+                    </p>
+                </div>
+                <img class='grid-item grid-item-49' src='../src/character/character_image/kimetunoyaiba_03.jpeg' alt=''>
+            </div>
+            <div class="grid">
+                <div class="textBlock">
+                    <p>
+                        鬼滅の刃
+                    </p>
+                </div>
+                <img class='grid-item grid-item-50' src='../src/character/character_image/kimetunoyaiba_04.jpg' alt=''>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- back to top button -->
+    <button onclick="backToTop()" id="backToTopBtn">Top</button>
+
+    <footer>
+        <div class="ft_btn">
+            <ul class="ft_list">
+                <li class="ft_Item"><a href="./index.html">Index</a></li>
+                <li class="ft_Item"><a href="./question.html">Question</a></li>
+                <li class="ft_Item"><a href="./credit.html">Credit</a></li>
+                <li class="ft_Item"><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>
