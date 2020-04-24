@@ -1,0 +1,195 @@
+
+.character_img {
+    display: none
+}
+
+.character_img img {
+    height: 600px;
+}
+
+/* img {
+    vertical-align: middle;
+} */
+
+/* Slideshow container */
+
+.slideshow-container {
+    margin: auto;
+    /* margin-top: 200px; */
+    position: relative;
+
+    max-width: 1000px;
+
+    /* display: flex;
+    justify-content: center; */
+}
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 100%;
+    width: auto;
+    padding: 16px;
+    margin-top: -100px;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    transition: 0.6s ease;
+    border-radius: 5px 5px 5px 5px;
+    user-select: none;
+
+}
+
+.character_img {
+    /* border: 3px solid #624dbf; */
+    text-align: center;
+    margin: 0px 50px;
+}
+
+/* Position the "next button" to the right */
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 5px 5px 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: var(--color1);
+}
+
+/* Caption text */
+
+.text {
+    color: #FFF;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: relative;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* The dots/bullets/indicators */
+
+.slides_dot {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    margin: 10px 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 150ms ease;
+}
+
+.active,
+.slides_dot:hover {
+    background-color: var(--color1);
+}
+
+/* intro container */
+
+.intro_container {
+    border: 5px solid white;
+    width: 80%;
+    /* height: 200px; */
+
+    text-align: left;
+}
+
+.intro_main {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+    font-size: large;
+    font-family: tetai;
+
+    /* content */
+    letter-spacing: 3px;
+    line-height: 200%;
+
+    opacity: 0;
+}
+
+h1 {
+    margin-top: 3%;
+}
+
+h2 {
+    line-height: 300%;
+    font-size: xxx-large;
+    font-family: yuShi, tetai;
+}
+
+.intro_speak {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+
+    background: url(../src/texture/blood_texture.jpeg);
+    -webkit-background-clip: text;
+    color: transparent;
+
+    transform: rotate(3deg);
+
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#intro_murada {
+    display: block;
+    opacity: 1;
+}
+
+#intro_chutaro,
+#intro_kanao,
+#intro_ozaki {
+    display: none;
+    opacity: 0;
+}
+
+button {
+    font-size: 50px;
+    width: 100px;
+    height: 100px;
+}
+
+/* Fade animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
