@@ -106,14 +106,16 @@
     /* height: 200px; */
 
     text-align: left;
+    
+    background-color: rgba(0,0,0,0.2);
 }
 
 .intro_main {
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 20px;
-    font-size: large;
-    font-family: Hannari, DFKai-sb;
+    font-size: x-large;
+    font-family: tetai, Hannari, DFKai-sb;
 
     /* content */
     letter-spacing: 3px;
@@ -137,6 +139,7 @@ h2 {
     text-align: center;
     font-size: xx-large;
     font-weight: bold;
+    font-family: tetai;
 
     background: url(../src/texture/blood_texture.jpeg);
     -webkit-background-clip: text;

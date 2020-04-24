@@ -39,13 +39,13 @@
 @font-face {
     /*衡山毛筆フォント草書*/
     font-family: Kouzan;
-    src: url(./font/KouzanMouhituFontOTF.otf);
+    src: url(../font/KouzanMouhituFontOTF.otf);
 }
 
 @font-face {
     /*はんなり明朝*/
     font-family: Hannari;
-    src: url(./font/Hannari.otf);
+    src: url(../font/Hannari.otf);
 }
 
 
