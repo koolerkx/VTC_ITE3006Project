@@ -8,19 +8,40 @@
 }
 
 @font-face {
-    font-family: myWord;
-    src: url(./font/HanyiSentyFlorCalligraphy.ttf)
+    font-family: tetai;
+    src: url(./font/tetai-2.ttf);
 }
 
 @font-face {
-    font-family: mainWord;
-    src: url(./font/tetai-2.ttf);
+    /* 源流明體 */
+    font-family: zh_content01;
+    src: url(./font/GenRyuMin-H.ttc)
+}
+
+@font-face {
+    /* 魚石行書 */
+    font-family: yuShi;
+    src: url(./font/YuShiXingShu-2.ttf);
+}
+
+@font-face {
+    /* KSW栄泉お試し教育漢字 */
+    font-family: Ksweisentrial;
+    src: url(./font/Ksweisentrial-0-2.ttf);
+}
+
+@font-face {
+    /* seto font */
+    font-family: seto;
+    src: url(./font/setofont.ttf);
 }
 
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+
+    /* font-family: tetai; */
 }
 
 body {
@@ -38,7 +59,7 @@ body {
     text-align: center;
     color: white;
 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: ; */
 }
 
 html {
@@ -104,7 +125,7 @@ nav {
     color: white;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: myWord, cursive;
+    font-family: Yushi ;
     font-size: xx-large;
 }
 
@@ -320,7 +341,7 @@ footer a {
 
 
 .ft_Item {
-    font-family: myWord;
+    font-family: Arial, Helvetica, sans-serif ;
     position: relative;
 }
 

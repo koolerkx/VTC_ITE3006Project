@@ -40,15 +40,14 @@
 
 
         <div class="topButton">
-            <button class="resetBtn" onclick="reset()">Reset</button>
-            <button class="downloadBtn" onclick="saveFile()">Download Image</button>
+            <button class="resetBtn" onclick="reset()">重置</button>
+            <button class="downloadBtn" onclick="saveFile()">下載圖片</button>
             <a href="" id="download"></a>
         </div>
 
         <div class="dropzone" id="dropzone">
-            Drag the image here <br>
-            or Click the button below <br>
-            to upload
+            把圖片拖放至此 <br>
+            或 點擊下方按鈕 <br>
             <input type="file" name="imgInput" id="imgInput" onchange="canvasLoadImg(this)">
         </div>
 
@@ -57,15 +56,15 @@
         </div>
 
         <!-- Canvas Meun -->
-        <button class="accordion">Canvas Componet Menu</button>
+        <button class="accordion">組件 選單</button>
         <div class="panel">
             <div class="canvasMenu_topBar">
-                <button class="canvasMenu_add" id="addText" onclick="textAdd()">Add Text</button>
+                <button class="canvasMenu_add" id="addText" onclick="textAdd()">增加文字</button>
                 <input type="text" name="textToAdd" id="addText_textToAdd" class="canvasMenu_add"
-                    placeholder="(Text to Add)" value="10">
-                <button class="canvasMenu_add" id="addRect" onclick="rectAdd()">Add Rect</button>
-                <button class="canvasMenu_add" id="addCircle" onclick="circleAdd()">Add Circle</button>
-                <button class="canvasMenu_add" id="remove" onclick="remove()">Remove</button>
+                    placeholder="文字" value="10">
+                <button class="canvasMenu_add" id="addRect" onclick="rectAdd()">增加長方體</button>
+                <button class="canvasMenu_add" id="addCircle" onclick="circleAdd()">增加圓形</button>
+                <button class="canvasMenu_add" id="remove" onclick="remove()">移除選取組件</button>
             </div>
 
             <div class="canvasMenu_para">
@@ -76,47 +75,47 @@
                   <input type="number" id="degreeInputText" value="0"min="0" max="360" onchange="degreeOnChangeText()"> -->
 
                 <!-- Color -->
-                <span class="paraLabel">Color:</span>
+                <span class="paraLabel">顏色:</span>
                 <input type="color" id="colorInputColor" value="#A5A5A5" oninput="colorOnInputText()"
                     onchange="colorOnChangeText()">
                 <br>
 
                 <!-- Position X -->
-                <span class="paraLabel">Position X:</span>
+                <span class="paraLabel">X 座標:</span>
                 <input type="range" id="posXInputRange" value="50" min="1" max="800" oninput="posXOnInputRange()">
                 <input type="number" id="posXInputText" value="50" min="1" max="800" onchange="posXOnChangeText()">
 
                 <!-- Position Y -->
-                <span class="paraLabel">Position Y:</span>
+                <span class="paraLabel">Y 座標:</span>
                 <input type="range" id="posYInputRange" value="50" min="1" max="800" oninput="posYOnInputRange()">
                 <input type="number" id="posYInputText" value="50" min="1" max="800" onchange="posYOnChangeText()">
                 <br>
 
                 <!-- Width -->
-                <span class="paraLabel">Width:</span>
+                <span class="paraLabel">闊度:</span>
                 <input type="range" id="widthInputRange" value="200" min="1" max="800" oninput="widthOnInputRange()">
                 <input type="number" id="widthInputText" value="200" min="1" max="800" onchange="widthOnChangeText()">
 
                 <!-- Height -->
-                <span class="paraLabel">Height:</span>
+                <span class="paraLabel">高度:</span>
                 <input type="range" id="heightInputRange" value="200" min="1" max="1000" oninput="heightOnInputRange()">
                 <input type="number" id="heightInputText" value="200" min="1" max="1000"
                     onchange="heightOnChangeText()">
                 <br>
 
                 <!-- radius -->
-                <span class="paraLabel">Radius:</span>
+                <span class="paraLabel">半徑:</span>
                 <input type="range" id="radiusInputRange" value="200" min="1" max="400" oninput="radiusOnInputRange()">
                 <input type="number" id="radiusInputText" value="200" min="1" max="400" onchange="radiusOnChangeText()">
 
                 <!-- fontSize -->
-                <span class="paraLabel">FontSize:</span>
+                <span class="paraLabel">文字大小:</span>
                 <input type="range" id="fzInputRange" value="10" min="10" max="200" oninput="fzOnInputRange()">
                 <input type="number" id="fzInputText" value="10" min="10" max="200" onchange="fzOnChangeText()">
                 <br>
 
                 <!-- font -->
-                <span class="paraLabel">Font:</span>
+                <span class="paraLabel">字體:</span>
                 <select id="fontInputSelect" onchange="fontOnChangeText()">
                     <option value="Comic Sans MS">Comic Sans MS</option>
                     <option value="Arial Black">Arial Black</option>
@@ -125,7 +124,7 @@
                 </select>
 
                 <!-- content -->
-                <span class="paraLabel">Content:</span>
+                <span class="paraLabel">內容:</span>
                 <input type="text" id="contentInputText" value="" onchange="contentOnChangeText()">
 
 

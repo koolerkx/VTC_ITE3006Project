@@ -15,7 +15,7 @@
 
 .slideshow-container {
     margin: auto;
-    margin-top: 200px;
+    /* margin-top: 200px; */
     position: relative;
 
     max-width: 1000px;
@@ -114,7 +114,7 @@
     margin-right: 5%;
     margin-bottom: 20px;
     font-size: large;
-    font-family: mainWord;
+    font-family: tetai;
 
     /* content */
     letter-spacing: 3px;
@@ -130,7 +130,7 @@ h1 {
 h2 {
     line-height: 300%;
     font-size: xxx-large;
-    font-family: myWord, cursive;
+    font-family: yuShi, tetai;
 }
 
 .intro_speak {
