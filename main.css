@@ -220,6 +220,8 @@ nav {
     align-items: center;
     justify-content: center;
 
+    -webkit-animation: laod_div 2000ms ease-in-out;
+    animation: laod_div 2200ms ease-in-out;
 }
 
 .loading_netuko {
@@ -249,6 +251,19 @@ nav {
     to {
         transform: scale(-1.5, 1.5);
         margin-left: 10%;
+    }
+}
+
+@keyframes laod_div {
+    from {
+    }
+
+    90% {
+        opacity: 1;
+    }
+    
+    100%{
+        opacity: 0;
     }
 }
 
