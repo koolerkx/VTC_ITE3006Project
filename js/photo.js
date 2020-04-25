@@ -301,7 +301,6 @@ var fontList = [
     "Arial Black",
     "Lucida Sans Unicode",
     "Courier New",
-    "Seto",
     "yuShi",
     "Tetai",
     "Hannari"

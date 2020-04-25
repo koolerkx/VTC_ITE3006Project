@@ -19,12 +19,6 @@
 }
 
 @font-face {
-    /* seto font */
-    font-family: seto;
-    src: url(../font/setofont.ttf);
-}
-
-@font-face {
     /*衡山毛筆フォント草書*/
     font-family: Kouzan;
     src: url(../font/KouzanMouhituFontOTF.otf);
