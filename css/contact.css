@@ -1,17 +1,14 @@
-.topBlock {
-    margin-top: 200px;
-    display: block;
+body {
+    font-family: zh_content01;
 }
 
+/* main header */
 h1{
     margin: auto;
     margin-bottom: 30px;
 }
 
-body {
-    font-family: zh_content01;
-}
-
+/* hr */
 .spreadLine {
     /* marign: 5px; */
     width: 50%;
@@ -27,7 +24,7 @@ body {
     transform: translateX(-1%);
 }
 
-
+/* person container */
 .person1, .person2 {
     display: flex;
     flex-direction: row;

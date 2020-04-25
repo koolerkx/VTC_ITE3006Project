@@ -74,9 +74,15 @@ function showContent(n) {
 }
 
 //After Loading animation,then go to the page
+//Get the value from browser stroage, change the character by the value
+// it should have set-ed value, if no, it will be zero
 window.onload = function () {
     Loading_animation();
-    this.currentSlide(parseInt(window.localStorage.getItem("characterIndex"))+1)
+    try {
+        this.currentSlide(parseInt(window.localStorage.getItem("characterIndex"))+1);
+    }catch (err) {
+        this.currentSlide(1);
+    }
 }
 
 //Loading animation

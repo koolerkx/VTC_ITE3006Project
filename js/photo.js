@@ -1,6 +1,8 @@
 var dropzone = document.getElementById("dropzone");
 
 // Drag and drop
+// when get the file, the drop zone change to canvas
+// when file above the drag zone, effect should be shown
 var upload = function (input) {
     canvasLoadImg(input);
 }
@@ -31,6 +33,9 @@ var img = new Image();
 var imgHeight = 600;
 var imgWidth = 600;
 
+// do when the dragzone get the file
+// check it is img file type or not
+// check the ratio
 function canvasLoadImg(input) {
     var file = input.files[0];
 
@@ -47,7 +52,7 @@ function canvasLoadImg(input) {
         console.log(imgWidth, imgHeight, ratio)
         // not accept image ratio too high
         if (ratio >= 2) {
-            alert("The Ration need to be smaller than 2 of width:height");
+            alert("The Ration need to be smaller than 2 of width/height");
             reset();
             return;
         }
@@ -83,14 +88,18 @@ function saveFile() {
 }
 
 // Reset the environment
+// reset the canvas
+// turn off canvs and turn on drag zone
 function reset() {
     canvas.height = 600;
     canvas.width = 600;
 
+    // set the drop zone size by the Canvas height and width
     dropzone.style.height = canvas.height + "px";
     dropzone.style.width = canvas.width + "px";
     dropzone.style.fontSize = (canvas.width / 17) + "px";
 
+// turn off canvs and turn on drag zone
     canvas.style.display = "none";
     dropzone.style.display = "flex";
 
@@ -112,6 +121,7 @@ function reset() {
 // }
 
 // accodiation
+// menu of canvas componet
 var acc = document.getElementsByClassName("accordion");
 
 for (var i = 0; i < acc.length; i++) {
@@ -148,6 +158,8 @@ function reOffset() {
     offsetY = BB.top;
 }
 
+// make sure the pos of canvas is accurate
+// need to calc offset again if pos change
 var offsetX, offsetY;
 reOffset();
 window.onscroll = function (e) { this.reOffset(); };
@@ -172,6 +184,8 @@ canvas.onmouseout = handleMouseOut;
 
 // given mouse X&Y (mx, my) and shape object
 // return true/false whether mouse is inside the shape
+// get the mouse pos on canvas
+// calc wheather the mouse click on the shape or not
 function isMouseInShape(mx, my, shape) {
     reOffset();
     if (shape.radius) {
@@ -194,6 +208,7 @@ function isMouseInShape(mx, my, shape) {
             return (true);
         }
     } else if (shape.content) {
+        // this is a text
         var tLeft = shape.x;
         var tRight = parseInt(shape.x + (shape.fontSize * shape.content.length));
         var tTop = shape.y - parseInt(shape.fontSize);
@@ -225,6 +240,7 @@ function handleMouseDown(e) {
             // select this shape
             selectedShapeIndex = i;
 
+            // re output the parameter when draging
             rePara();
 
             // set the is Dragging Flag
@@ -250,6 +266,7 @@ function handleMouseUp(e) {
     isDragging = false;
 }
 
+// stop when mouse is not on canavs
 function handleMouseOut(e) {
     reOffset();
     // return if we're not dragging
@@ -263,6 +280,8 @@ function handleMouseOut(e) {
     isDragging = false;
 }
 
+// reset the shape pos, by drawing the whole canavs
+// calculate the new range of pos of the shape
 function handleMouseMove(e) {
     // return if we're not dragging
     if (!isDragging) { return; }
@@ -401,6 +420,8 @@ var text = [
 //     drawAll();
 // }
 
+// onchange and oninput of the parameter menu
+// when the slider and text input, the canvas response immedetely
 function colorOnChangeText() {
     // change shape
     var shape = shapes[selectedShapeIndex];
@@ -559,7 +580,7 @@ function contentOnChangeText() {
 /* #endregion */
 
 
-// Refresh para value
+// Refresh paramater value
 function rePara() {
     console.log(selectedShapeIndex == undefined);
     if (selectedShapeIndex == undefined) {
@@ -667,6 +688,7 @@ function rePara() {
 }
 
 // Componet Add button, onclick
+// add a shape in canvas
 function rectAdd() {
     shapes.push({ type: "rect", x: 50, y: 50, width: 200, height: 200, degree: 0, color: "#FFFFFF" })
     drawAll();
@@ -683,6 +705,7 @@ function textAdd() {
     drawAll();
 }
 
+// remove shape
 function remove() {
     shapes.splice(selectedShapeIndex, 1);
     selectedShapeIndex = undefined;

@@ -49,7 +49,7 @@
  document.addEventListener('scroll', function (e) {
      var offset = window.pageYOffset;
      scroll = offset;
-     scroll -= 1000;
+     scroll -= 1000;    //value form test
      //Increase the width and left %
      //  layer3.style.width = (100 + scroll / 5) + '%';
      kaminari_right.style.left = scroll / 50 + '%';
@@ -61,8 +61,10 @@
      function (callback) {
          window.setTimeout(callback, 1000 / 60)
      };
+    //  get all need to scroll
  var elementsToShow = document.querySelectorAll('.show-on-scroll');
 
+//  keep tracking if the object is in the screen or not
  function loop() {
 
      elementsToShow.forEach(function (element) {
@@ -80,6 +82,7 @@
  loop();
 
  // Helper function from: http://stackoverflow.com/a/7557433/274826
+//  check the element can see or not
  function isElementInViewport(el) {
      var rect = el.getBoundingClientRect();
      return (

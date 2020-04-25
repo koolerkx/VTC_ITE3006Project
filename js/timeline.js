@@ -7,6 +7,8 @@ var scroll_img = window.requestAnimationFrame ||
 var elementsToShow = document.querySelectorAll('.show-on-scroll');
 console.log(elementsToShow);
 
+// keep tracking the element on screen or not
+// look koukyuu.js for more
 function loop() {
 
     elementsToShow.forEach(function (element) {

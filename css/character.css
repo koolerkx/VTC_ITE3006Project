@@ -114,7 +114,6 @@
 }
 
 /* On hover, add a black background color with a little bit see-through */
-
 .prev:hover,
 .next:hover {
   background-color: var(--color1);
@@ -134,7 +133,6 @@
 }
 
 /* The dots/bullets/indicators */
-
 .slides_dot {
   cursor: pointer;
   height: 30px;
@@ -206,18 +204,6 @@ h2 {
   margin-top: 5%;
   margin-bottom: 5%;
 }
-
-/*#intro_murada {
-  display: block;
-  opacity: 1;
-}
-
-#intro_chutaro,
-#intro_kanao,
-#intro_ozaki {
-  display: block;
-  opacity: 0;
-}*/
 
 /* Fade animation */
 .fade {

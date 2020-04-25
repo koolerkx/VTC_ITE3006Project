@@ -1,8 +1,8 @@
 // function shuffle the array
 function shuffle(array) {
     for (var i = 0; i < array.length - 1; i++) {
-        var j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+        var j = Math.floor(Math.random() * (i + 1));    //get a random position
+        [array[i], array[j]] = [array[j], array[i]];    //Destructuring assignment, swap value
     }
 }
 
@@ -12,6 +12,7 @@ var grid = document.getElementsByClassName("grid");
 
 var data = [];  //arrary to save the grid item
 
+// get all img info, set it into array
 for (var i = 0; i < textList.length; i++) {
     data.push({
         textBlock: textList[i].innerHTML,
@@ -20,6 +21,7 @@ for (var i = 0; i < textList.length; i++) {
     // console.log(data[i].textBlock, data[i].src);
 }
 
+// shuffle the img array
 // make it in random order
 for (let i = 0; i < 10000; i++) {
     shuffle(data);
@@ -30,7 +32,7 @@ for (let i = 0; i < 10000; i++) {
 // var bigPictureImg = document.getElementById("bigPictureImg");
 // var bigPictureText = document.getElementById("bigPictureText");
 
-// assign back to the web also assign modal
+// assign img and caption back to the web also assign modal
 for (var i = 0; i < textList.length; i++) {
     textList[i].innerHTML = data[i].textBlock;
     gridItem[i] = document.getElementsByClassName("grid-item-" + (i + 1))[0];

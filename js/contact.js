@@ -6,6 +6,7 @@ var emailCheck = document.getElementById("mailCheck");
 var phone = document.getElementById("phone");
 var content = document.getElementById("content");
 
+// reset the form
 function resetForm() {
     fname.value = "";
     fname.setCustomValidity("");
@@ -23,6 +24,8 @@ function resetForm() {
     content.setCustomValidity("");
 }
 
+// submit the form
+// do the validition before submit
 function submitForm() {
     var invalid = false;
     if (isInvalid("fname")) {
@@ -70,6 +73,7 @@ function submitForm() {
         content.setCustomValidity("");
     }
     
+    // if all valid, it will do the following
     if(!invalid){
         receive();
         saveContent();
@@ -77,6 +81,7 @@ function submitForm() {
 
 }
 
+// check valid
 function isInvalid(type) {
     var hasNumber = /\d/
     if (type == "fname") {
@@ -96,6 +101,8 @@ function isInvalid(type) {
     }
 }
 
+// feedback user input info to user
+// run after submit
 function receive() {
     var defaultOutput = "We Receive, Please wait for our reply!";
 
@@ -112,6 +119,7 @@ function receive() {
 }
 
 // save content to cookie
+// save user input data into cookie
 function saveContent() {
     setCookie("fname", fname.value, 30);
     setCookie("lname", lname.value, 30);
@@ -120,6 +128,7 @@ function saveContent() {
 }
 
 // From W3school
+// set cookie with the value
 function setCookie(cname, cvalue, exdays) {
     document.cookie = "";
     var d = new Date();
