@@ -90,5 +90,8 @@ function Loading_animation() {
         perloader.style.display = 'none';
         topNav.className = "topNav"
         topNav.style.display = "block";
+
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }, 2000);
 }

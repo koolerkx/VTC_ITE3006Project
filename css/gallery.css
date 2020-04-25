@@ -101,18 +101,7 @@ hr {
   width: 30%;
 }
 
-#loader_gallery {
-  position: fixed;
-  height: 100%;
-  width: 100%;
 
-  background-color: black;
-  z-index: 100;
-  opacity: 1;
-  transition: 1000ms ease-in-out;
-
-  overflow: auto;
-}
 
 
 

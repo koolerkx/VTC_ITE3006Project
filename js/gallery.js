@@ -1,5 +1,3 @@
-var loader_gallery = document.getElementById("loader_gallery");
-
 // function shuffle the array
 function shuffle(array) {
     for (var i = 0; i < array.length - 1; i++) {
@@ -45,8 +43,3 @@ for (var i = 0; i < textList.length; i++) {
 //     modal.style.display = "none";
 // }
 
-// finish loading
-loader_gallery.style.opacity = 0;
-this.setTimeout(() => {
-    loader_gallery.style.display = "none";
-}, 1000);

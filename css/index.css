@@ -88,6 +88,7 @@ audio {
 
     margin: 20px;
     font-family: yuShi;
+    display: none;
 }
 
 .notSupport button {
@@ -114,3 +115,14 @@ audio {
         display: block;
     }
 }
+
+/* touch device */
+@media (hover: none) and (pointer: coarse) {
+    #background {
+        display: none;
+    }
+
+    .notSupport {
+        display: block;
+    }
+}   

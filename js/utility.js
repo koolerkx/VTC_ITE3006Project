@@ -1,3 +1,6 @@
+//loader start
+var loader = document.getElementById("loader_blackFade");
+
 // Back to top Button function
 /* Ref: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
 backToTopBtn = document.getElementById("backToTopBtn");
@@ -8,6 +11,7 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
+    try{
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         backToTopBtn.style.display = "block";
         // backToTopBtn.style.opacity = 1;
@@ -15,6 +19,9 @@ function scrollFunction() {
         backToTopBtn.style.display = "none";
         // backToTopBtn.style.opacity = 0;
     }
+}catch(err) {
+    console.log(err);
+}   
 }
 
 // When the user clicks on the button, scroll to the top of the document
@@ -36,13 +43,17 @@ function closeNav() {
 
 //right side Navbar appear or disappear
 const navSlide = () => {
-    const smallNav = document.querySelector(".smallNav");
+    const smallNav = document.querySelector(".sideNav");
     const nav = document.querySelector(".nav-links");
 
-    smallNav.addEventListener("click", () => {
-        //Toggle Nav
-        nav.classList.toggle("nav-active");
-    });
+    try{
+        smallNav.addEventListener("click", () => {
+            //Toggle Nav
+            nav.classList.toggle("nav-active");
+        });
+    } catch(err) {
+        console.log(err);
+    }
 };
 navSlide();
 
@@ -51,3 +62,15 @@ function toCharacterPage(index) {
     // console.log(localStorage.getItem("characterIndex"));
     document.location.href = "./character.html";
 }
+
+// finish loading
+try {
+loader.style.opacity = 0;
+this.setTimeout(() => {
+    loader.style.display = "none";
+}, 1000);
+} catch(err) {
+    console.log(err);
+}
+
+
