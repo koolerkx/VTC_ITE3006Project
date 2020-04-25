@@ -6,11 +6,18 @@ body {
     background-color: #000;
 }
 
+/* background image */
 img {
     width: 100%;
     z-index: 0;
 }
 
+/* audio is background music, should not be seen */
+audio {
+    display: none;
+}
+
+/* Title of website */
 .title {
     position: absolute;
     top: 5%;
@@ -30,6 +37,7 @@ img {
     -webkit-text-stroke: 0.025px black;
 }
 
+/* Button to enter the main website */
 .enterBtn {
     position: absolute;
     left: 50%;
@@ -52,6 +60,7 @@ img {
 
 }
 
+/* effect of entering button */
 .enterBtn:hover {
     transition-duration: 500ms;
 
@@ -59,6 +68,7 @@ img {
     background-color: rgba(132, 24, 10, 0.5);
 }
 
+/* backgrond button */
 #background {
     width: 100%;
     position: absolute;
@@ -69,6 +79,7 @@ img {
     top: -50%;
 }
 
+/* show for responsive */
 .notSupport {
     /* display: none; */
     border: 2px solid rgba(132, 24, 10, 0.5);

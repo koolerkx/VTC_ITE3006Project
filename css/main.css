@@ -1,339 +1,331 @@
 :root {
-    --color1: #5d4954;
-    --color2: #6c57f2;
-    --color3: #6452d9;
-    --color4: #9591f2;
-    --color5: #0f0e0e;
-    /* background */
+  --color1: #5d4954;
+  --color2: #6c57f2;
+  --color3: #6452d9;
+  --color4: #9591f2;
+  --color5: #0f0e0e;
+  /* background */
 }
 
 @font-face {
-    font-family: tetai;
-    src: url(../font/tetai-2.ttf);
+  font-family: tetai;
+  src: url(../font/tetai-2.ttf);
 }
 
 @font-face {
-    /* 魚石行書 */
-    font-family: yuShi;
-    src: url(../font/YuShiXingShu-2.ttf);
+  /* 魚石行書 */
+  font-family: yuShi;
+  src: url(../font/YuShiXingShu-2.ttf);
 }
 
 @font-face {
-    /* seto font */
-    font-family: seto;
-    src: url(../font/setofont.ttf);
+  /*衡山毛筆フォント草書*/
+  font-family: Kouzan;
+  src: url(../font/KouzanMouhituFontOTF.otf);
 }
 
 @font-face {
-    /*衡山毛筆フォント草書*/
-    font-family: Kouzan;
-    src: url(../font/KouzanMouhituFontOTF.otf);
-}
-
-@font-face {
-    /*はんなり明朝*/
-    font-family: Hannari;
-    src: url(../font/Hannari.otf);
+  /*はんなり明朝*/
+  font-family: Hannari;
+  src: url(../font/Hannari.otf);
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 img {
-    object-fit: contain;
+  object-fit: contain;
 }
 
 body {
-    background: url(../src/bg/background_fujinohana.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 60%;
-    background-attachment: fixed;
-    /* background: url(./src/ep11_bg.png);
+  background: url(../src/bg/background_fujinohana.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  background-attachment: fixed;
+  /* background: url(./src/ep11_bg.png);
     background-repeat: no-repeat;
     background-size: cover; */
 
-    background-color: var(--color5);
+  background-color: var(--color5);
 
-    text-align: center;
-    color: white;
+  text-align: center;
+  color: white;
 
-    font-family: tetai, DFKai-sb;
+  font-family: tetai, yuShi, Kouzan;
 
-    /* font-family: ; */
+  /* font-family: ; */
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 html,
 body {
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
 }
 
 /* NAV Bar CSS Start*/
 
 .topNav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
 
-    background-color: var(--color1);
-    background-image: url(../src/bg/fujinohana01.png);
+  background-color: var(--color1);
+  background-image: url(../src/bg/fujinohana01.png);
 
-    z-index: 100;
+  z-index: 100;
 }
 
 .navLogo {
-    background: url(../src/utility/logo.png);
-    background-repeat: no-repeat;
-    height: 80px;
+  background: url(../src/utility/logo.png);
+  background-repeat: no-repeat;
+  height: 80px;
 
-    float: left;
+  float: left;
 
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 150px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 150px;
 }
 
 nav {
-    float: none;
-    margin-right: 50px;
+  float: none;
+  margin-right: 50px;
 }
 
 .nav-links ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .nav-links li {
-    display: inline-block;
-    margin-left: 30px;
-    padding-top: 35px;
+  display: inline-block;
+  margin-left: 30px;
+  padding-top: 35px;
 
-    position: relative;
+  position: relative;
 }
 
 .nav-links a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: Yushi;
-    font-size: xx-large;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Yushi;
+  font-size: xx-large;
 }
 
 .nav-links a:hover {
-    color: var(--color4);
+  color: var(--color4);
 }
 
 /* color underline  */
 .nav-links a::after {
-    content: "";
-    display: block;
-    height: 5px;
-    width: 0px;
-    background-color: var(--color4);
+  content: "";
+  display: block;
+  height: 5px;
+  width: 0px;
+  background-color: var(--color4);
 
-    position: absolute;
-    left: 50%;
-    transition: all ease-in-out 250ms;
+  position: absolute;
+  left: 50%;
+  transition: all ease-in-out 250ms;
 }
 
 .nav-links a:hover::after {
-    width: 100%;
-    left: 0%;
+  width: 100%;
+  left: 0%;
 }
 
 /*right side of the Navbar*/
 .sideNav {
-    float: right;
-    display: none;
-    cursor: pointer;
+  float: right;
+  display: none;
+  cursor: pointer;
 }
 
 .sideNav div {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    margin: 5px;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
 }
 
 /* When the screen less than 1200px Navbar change to Sidebar */
 @media screen and (max-width: 1200px) {
+  .sideNav {
+    margin: 30px;
+  }
 
-    .sideNav {
-        margin: 30px;
-    }
+  .sideNav {
+    display: block;
+  }
 
-    .sideNav {
-        display: block;
-    }
+  .nav-links li {
+    margin: 15px 20px;
+  }
 
-    .nav-links li {
-        margin: 15px 20px;
-    }
-
-    .nav-links {
-        position: absolute;
-        right: 0px;
-        height: 90vh;
-        top: 100px;
-        background-image: url(../src/bg/fujinohana01.png);
-        display: flex;
-        flex-direction: column;
-        width: 25%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-        overflow-y: scroll;
-    }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 90vh;
+    top: 100px;
+    background-image: url(../src/bg/fujinohana01.png);
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    overflow-y: scroll;
+  }
 }
 
 .nav-active {
-    transform: translateX(0%);
+  transform: translateX(0%);
 }
 
 /* NAV Bar Css END */
 
 /* back to top button */
 #backToTopBtn {
-    /* Ref: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
-    /* default none, scoll to show */
-    display: none;
+  /* Ref: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
+  /* default none, scoll to show */
+  display: none;
 
-    /* opacity: 0; */
+  /* opacity: 0; */
 
-    /* position */
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
+  /* position */
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
 
-    z-index: 99;
-    /* not overlap */
-    border: none;
-    /* clear border */
-    outline: none;
-    /* clear outline */
+  z-index: 99;
+  /* not overlap */
+  border: none;
+  /* clear border */
+  outline: none;
+  /* clear outline */
 
-    background-color: var(--color1);
-    color: white;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 90px;
+  background-color: var(--color1);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 90px;
 
-    font-size: xx-large;
-    font-weight: bold;
-    text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
 
-    transition-duration: 2s;
+  transition-duration: 2s;
 }
 
 #backToTopBtn:hover {
-    background-color: #624dbf;
+  background-color: #624dbf;
 }
 
 /* Set the main page*/
 #container {
-    position: relative;
-    width: 100%;
-    min-height: 100%;
-    padding-top: 100px;
-    /* padding-bottom: 150px; */
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  padding-top: 100px;
+  /* padding-bottom: 150px; */
 }
 
 /* Footer */
 .ft_btn {
-    display: flex;
-    margin: auto;
+  display: flex;
+  margin: auto;
 }
 
 .ft_list,
 .ft_Item {
-    margin: 10px;
-    font-size: 20px;
-    text-align: center;
-    list-style: none;
+  margin: 10px;
+  font-size: 20px;
+  text-align: center;
+  list-style: none;
 
-    display: inline;
+  display: inline;
 }
 
 footer {
-    width: 100%;
-    height: 70px;
-    position: absolute;
-    /* bottom: 0; */
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
 
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
-    background-color: var(--color1);
-    background-image: url(../src/bg/fujinohana02.png);
+  background-color: var(--color1);
+  background-image: url(../src/bg/fujinohana02.png);
 }
 
 footer a {
-    color: white;
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-family: Yushi;
-    font-size: 20px;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-family: Yushi;
+  font-size: 20px;
 }
 
 .text {
-    position: relative;
-    margin-bottom: 10px;
-    font-size: 10px;
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 10px;
 }
 
 .ft_Item {
-    font-family: Arial, Helvetica, sans-serif;
-    position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
 }
 
 .ft_list a::after {
-    content: "";
-    display: block;
-    height: 5px;
-    width: 100%;
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
 
-    background-color: var(--color4);
+  background-color: var(--color4);
 
-    left: 50%;
+  left: 50%;
 
-    position: absolute;
-    width: 0px;
+  position: absolute;
+  width: 0px;
 
-    transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms;
 }
 
 .ft_list a:hover::after {
-    width: 100%;
-    left: 0%;
+  width: 100%;
+  left: 0%;
 }
 
 .ft_list a:hover {
-    color: var(--color4);
+  color: var(--color4);
 }
 
 @media screen and (max-width: 1200px) {
+  .next,
+  .prev {
+    display: none;
+  }
 
-    .next,
-    .prev {
-        display: none;
-    }
-
-    .intro_container {
-        width: 90%;
-    }
+  .intro_container {
+    width: 90%;
+  }
 }
