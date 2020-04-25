@@ -13,21 +13,9 @@
 }
 
 @font-face {
-    /* 源流明體 */
-    font-family: zh_content01;
-    src: url(../font/GenRyuMin-H.ttc)
-}
-
-@font-face {
     /* 魚石行書 */
     font-family: yuShi;
     src: url(../font/YuShiXingShu-2.ttf);
-}
-
-@font-face {
-    /* KSW栄泉お試し教育漢字 */
-    font-family: Ksweisentrial;
-    src: url(../font/Ksweisentrial-0-2.ttf);
 }
 
 @font-face {

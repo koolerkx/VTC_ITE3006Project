@@ -163,3 +163,9 @@ hr {
     transform: rotateZ(-90deg);
 }
  */
+
+ @media screen and (max-width:1200px){
+    .grid-container .grid p {
+        font-size: 30px;
+    }
+}

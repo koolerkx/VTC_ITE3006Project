@@ -116,6 +116,57 @@
     background-attachment: fixed;
 }
 
+.fire, .sao {
+    padding-bottom: 50px;
+    padding-top: 50px;
+    /* transform: translateX(-50%); */
+}
+
+.fire video, .sao video {
+    min-width: 100%;
+    /* position: fixed; */
+    top: 0;
+}
+
+iframe {
+    min-width: 100%;
+}
+
+.content .firekyoukyuu {
+    font-size: 50px;
+    
+}
+
+.content_pt6 .idolKyokyuu {
+    font-size: 50px;
+}
+
+.idol {
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    overflow: hidden;
+    background: url(../src/character/other/idol_img1.png);
+    /* background-position: center; */
+    /*full size in the box*/
+    background-size: cover;
+    background-position: bottom 100%;
+    background-attachment: fixed;
+}
+
+.team8 {
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    overflow: hidden;
+    background: url(../src/character/other/team8.gif);
+    /* background-position: center; */
+    /*full size in the box*/
+    background-size: cover;
+    background-position: bottom 100%;
+    background-attachment: fixed;
+}
+
 /*End of Scrolling animation in the second*/
 
 .content {
@@ -172,6 +223,26 @@
     transform: rotate(-2deg) ;
 }
 
+.content_pt4 .introContainer {
+    background-color: rgba(239, 96, 50, 0.2);
+    transform: rotate(-2deg) ;
+}
+
+.content_pt5 .introContainer {
+    background-color: rgba(147, 176, 225, 0.2);
+    transform: rotate(-2deg) ;
+}
+
+.content_pt6 .introContainer {
+    background-color: rgba(100,	82,	217, 0.2);
+    transform: rotate(5deg) ;
+}
+
+.content_pt7 .introContainer {
+    background-color: rgba(100,	82,	217, 0.2);
+    transform: rotate(3deg) ;
+}
+
 /* font texure */
 
 .mizunokoukyuu {
@@ -189,6 +260,20 @@
 
 .hononokyoukyuu {
     background: url(../src/texture/hono_texture.png);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.saoKyokyuu  {
+    background: url(../src/texture/water_texture.png);
+    background-position: center;
+    -webkit-background-clip: text;
+    background-size: 800%;
+    color: transparent;
+}
+
+.idolKyokyuu {
+    background: url(../src/texture/southPoint_texture.png);
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -236,6 +321,38 @@
     margin-left: 5%;
 }
 
+.content_pt4 .inline-photo {
+    box-shadow: 1em 1em 3em .25em rgba(147, 176, 225, 0.2);
+    /* height: 500px; */
+    transform: rotateZ(5deg);
+    margin-right: 0;
+    margin-left: 5%;
+}
+
+.content_pt5 .inline-photo {
+    box-shadow: 1em 1em 3em .25em rgba(147, 176, 225, 0.2);
+    /* height: 500px; */
+    transform: rotateZ(3deg);
+    margin-right: 0;
+    margin-left: 5%;
+}
+
+.content_pt6 .inline-photo {
+    box-shadow: 1em 1em 3em .25em rgba(100,	82,	217, 0.2);
+    /* height: 500px; */
+    transform: rotateZ(-3deg);
+    margin-right: 0;
+    margin-left: 5%;
+}
+
+.content_pt7 .inline-photo {
+    box-shadow: 1em 1em 3em .25em rgba(100,	82,	217, 0.2);
+    /* height: 500px; */
+    transform: rotateZ(-3deg);
+    margin-right: 0;
+    margin-left: 5%;
+}
+
 #container_kyokyuu {
     position: relative;
     width: 100%;
@@ -263,6 +380,11 @@
         margin: 50px;
         width: 500px;
     }
+
+    .content_pt4 .inline-photo {
+        width:auto;
+    }
+    
     .introContainer {
         margin-top: 80px;
         width: 500px;
@@ -271,7 +393,14 @@
     .honoCover {
         display: none;
     }
-}
+
+    .content_pt5 .saoKyokyuu {
+        font-size: 50px;
+    }
+
+    .content_pt6 .idolKyokyuu {
+        font-size: 50px;
+    }
 
 @media screen and (max-width:600px) {
     #container_kyokyuu{
