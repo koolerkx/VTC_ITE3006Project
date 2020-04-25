@@ -20,13 +20,13 @@ img {
     font-size: 80px;
     font-family: yuShi;
 
-    background: url(../src/texture/water_texture.png);
+    background: url(../src/texture/dark.png);
     background-position: center;
-    background-size: 200%;
+    background-size: 12%;
     -webkit-background-clip: text;
     color: transparent;
 
-    text-shadow: 0px 0px 20px rgba(18,233,255,0.5);
+    /*text-shadow: 0px 0px 20px rgba(18, 233, 255, 0.5);*/
     -webkit-text-stroke: 0.025px black;
 }
 
@@ -48,11 +48,11 @@ img {
     font-size: 100px;
     font-family: yuShi;
     font-weight: bold;
-    
-    
+
+
 }
 
-.enterBtn:hover{
+.enterBtn:hover {
     transition-duration: 500ms;
 
     border-style: dashed;

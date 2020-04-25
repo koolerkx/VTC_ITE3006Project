@@ -73,8 +73,8 @@ function showContent(n) {
     document.getElementById(content[n]).style.opacity = 1;
 }
 
-
-window.onload = function() {
+//After Loading animation,then go to the page
+window.onload = function () {
     Loading_animation();
 }
 
@@ -85,9 +85,9 @@ function Loading_animation() {
     var topNav = document.getElementById("topNav");
     topNav.className = "";
     // topNav.style.display = "none"; 
-    setTimeout(() => { 
-        perloader.style.display = 'none'; 
+    setTimeout(() => {
+        perloader.style.display = 'none';
         topNav.className = "topNav"
-        topNav.style.display = "block"; 
+        topNav.style.display = "block";
     }, 2000);
 }

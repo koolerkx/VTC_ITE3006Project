@@ -1,3 +1,55 @@
+/*Loading page*/
+#loader {
+  top: 0;
+
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* background-image: url(.././src/loading.gif), url(.././src/loading_bg.png); */
+  background-image: url(../src/bg/loading_bg.png);
+  /* background-position: center; */
+  background-repeat: repeat;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  -webkit-animation: laod_div 2000ms ease-in-out;
+  animation: laod_div 2200ms ease-in-out;
+}
+
+.loading_netuko {
+  -webkit-animation: laod 2000ms ease-in-out;
+  animation: laod 2200ms ease-in-out;
+}
+
+@keyframes laod {
+  from {
+    transform: scale(-0.5, 0.5);
+    margin-left: -40%;
+  }
+
+  to {
+    transform: scale(-1.5, 1.5);
+    margin-left: 10%;
+  }
+}
+
+@keyframes laod_div {
+  from {}
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/*End of Loading image*/
+
 .character_img {
   display: none;
 }
@@ -65,16 +117,17 @@
   background-color: var(--color1);
 }
 
-/* Caption text */
+/* animation from  left to right*/
+@-webkit-keyframes fade {
+  from {
+    transform: scale(-0.5, 0.5);
+    margin-left: -40%;
+  }
 
-.text {
-  color: #fff;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: relative;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+  to {
+    transform: scale(-1.5, 1.5);
+    margin-left: 10%;
+  }
 }
 
 /* The dots/bullets/indicators */
@@ -104,17 +157,17 @@
   width: 80%;
   /* height: 200px; */
 
-    text-align: left;
-    
-    background-color: rgba(0,0,0,0.2);
+  text-align: left;
+
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .intro_main {
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 20px;
-    font-size: x-large;
-    font-family: tetai, Hannari, DFKai-sb;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 20px;
+  font-size: x-large;
+  font-family: tetai, Hannari, DFKai-sb;
 
   /* content */
   letter-spacing: 3px;
@@ -134,11 +187,12 @@ h2 {
   font-family: yuShi, tetai;
 }
 
+/*Caption text*/
 .intro_speak {
-    text-align: center;
-    font-size: xx-large;
-    font-weight: bold;
-    font-family: tetai;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
+  font-family: tetai;
 
   background: url(../src/texture/blood_texture.jpeg);
   -webkit-background-clip: text;
@@ -150,7 +204,7 @@ h2 {
   margin-bottom: 5%;
 }
 
-#intro_murada {
+/*#intro_murada {
   display: block;
   opacity: 1;
 }
@@ -158,9 +212,9 @@ h2 {
 #intro_chutaro,
 #intro_kanao,
 #intro_ozaki {
-  display: none;
+  display: block;
   opacity: 0;
-}
+}*/
 
 /* Fade animation */
 .fade {

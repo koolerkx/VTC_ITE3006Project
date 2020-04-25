@@ -1,4 +1,5 @@
-.copyRight, .techRef {
+.copyRight,
+.techRef {
     margin: auto;
     text-align: center;
 
@@ -20,14 +21,15 @@ table {
 
     width: 1000px;
 
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 th {
     height: 50px;
 }
 
-td, th {
+td,
+th {
     border: 1px solid #FFF;
 }
 
@@ -43,7 +45,12 @@ hr {
     background-color: white;
 }
 
-a:hover {
+.techRef a:hover {
+    transition: 500ms ease-in-out;
+    background-color: #fff;
+}
+
+.copyRight a:hover {
     transition: 500ms ease-in-out;
     background-color: #fff;
 }
