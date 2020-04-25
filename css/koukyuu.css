@@ -101,14 +101,15 @@
 
 .honoCover {
     width: 100%;
-    height: 800px;
+    height: 1000px;
     position: relative;
     overflow: hidden;
-    background: url(../src/character/character_image/hono_cover.png);
-    background-position: center;
+    background: url(../src/character/character_image/hono_cover2.jpg);
+    /* background-position: center; */
     /*full size in the box*/
     background-size: cover;
     background-position: bottom 100%;
+    background-attachment: fixed;
 }
 
 /*End of Scrolling animation in the second*/
@@ -142,6 +143,8 @@
     transition: transform 4s .25s cubic-bezier(0, 1, .3, 1), opacity .3s .25s ease-out;
     /* width: 90%; */
     will-change: transform, opacity;
+
+    font-size: 20px;
 }
 
 .introContainer.is-visible {
