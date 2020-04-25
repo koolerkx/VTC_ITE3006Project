@@ -47,7 +47,8 @@ audio {
     width: 400px;
     height: 200px;
 
-    transform: translate(-250px, -50px);
+    /* transform: translate(-250px, -50px); */
+    transform: translate(-50%, -50%);
 
     border: 5px solid rgb(251, 253, 141);
     border-radius: 100px;

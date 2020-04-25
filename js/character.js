@@ -76,6 +76,7 @@ function showContent(n) {
 //After Loading animation,then go to the page
 window.onload = function () {
     Loading_animation();
+    this.currentSlide(parseInt(window.localStorage.getItem("characterIndex"))+1)
 }
 
 //Loading animation

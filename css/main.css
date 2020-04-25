@@ -49,14 +49,10 @@ body {
     /* background: url(./src/ep11_bg.png);
     background-repeat: no-repeat;
     background-size: cover; */
-
     background-color: var(--color5);
-
     text-align: center;
     color: white;
-
     font-family: tetai, yuShi, Kouzan;
-
     /* font-family: ; */
 }
 
@@ -64,8 +60,7 @@ html {
     scroll-behavior: smooth;
 }
 
-html,
-body {
+html, body {
     width: 100%;
     height: 100%;
     margin: 0px;
@@ -80,10 +75,8 @@ body {
     top: 0;
     width: 100%;
     height: 100px;
-
     background-color: var(--color1);
     background-image: url(../src/bg/fujinohana01.png);
-
     z-index: 100;
 }
 
@@ -91,17 +84,17 @@ body {
     background: url(../src/utility/logo.png);
     background-repeat: no-repeat;
     height: 80px;
-
+    display: block;
     float: left;
-
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-left: 150px;
+    /* margin-left: 150px; */
+    margin-left: 10%;
 }
 
 nav {
     float: none;
-    margin-right: 50px;
+    /* margin-right: 50px; */
 }
 
 .nav-links ul {
@@ -114,7 +107,6 @@ nav {
     display: inline-block;
     margin-left: 30px;
     padding-top: 35px;
-
     position: relative;
 }
 
@@ -124,6 +116,8 @@ nav {
     text-transform: uppercase;
     font-family: Yushi;
     font-size: xx-large;
+
+    cursor: pointer;
 }
 
 .nav-links a:hover {
@@ -136,13 +130,10 @@ nav {
     height: 5px;
     width: 100%;
     background-color: var(--color4);
-
     left: 50%;
-
     position: absolute;
     width: 0px;
     left: 50%;
-
     transition: all ease-in-out 250ms;
 }
 
@@ -151,7 +142,53 @@ nav {
     left: 0%;
 }
 
+/* drop down menu */
+.dropdown {
+    margin-top:5px !important;
+}
+
+ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    display: none;
+    background-color: rgba(40, 40, 40, 0.9);
+    width: 150px;
+}
+
+ul li:hover>ul, ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    animation: dropdown 500ms;
+    transition: 500ms;
+}
+
+ul li ul li {
+    clear: both;
+    width: 100%;
+
+    left: -30px;
+}
+
+ul li ul li a{
+    cursor: pointer;
+}
+
+@keyframes dropdown {
+    0% {
+        visibility: visible;
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 /*right side of the Navbar*/
+
 .smallNav {
     float: right;
     display: none;
@@ -166,20 +203,16 @@ nav {
 }
 
 @media screen and (max-width: 1200px) {
-
     /* navbar to sidebar */
     .smallNav {
         margin: 30px;
     }
-
     .smallNav {
         display: block;
     }
-
     .nav-links li {
         margin: 15px 20px;
     }
-
     .nav-links {
         position: absolute;
         right: 0px;
@@ -202,35 +235,30 @@ nav {
 /* NAV Bar Css END */
 
 /* back to top button */
+
 #backToTopBtn {
     /* Ref: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp */
     /* default none, scoll to show */
     display: none;
-
     /* opacity: 0; */
-
     /* position */
     position: fixed;
     bottom: 50px;
     right: 50px;
-
     z-index: 99;
     /* not overlap */
     border: none;
     /* clear border */
     outline: none;
     /* clear outline */
-
     background-color: var(--color1);
     color: white;
     cursor: pointer;
     padding: 15px;
     border-radius: 90px;
-
     font-size: xx-large;
     font-weight: bold;
     text-align: center;
-
     transition-duration: 2s;
 }
 
@@ -239,6 +267,7 @@ nav {
 }
 
 /* Set the main page*/
+
 #container {
     position: relative;
     width: 100%;
@@ -248,18 +277,17 @@ nav {
 }
 
 /* Footer */
+
 .ft_btn {
     display: flex;
     margin: auto;
 }
 
-.ft_list,
-.ft_Item {
+.ft_list, .ft_Item {
     margin: 10px;
     font-size: 20px;
     text-align: center;
     list-style: none;
-
     display: inline;
 }
 
@@ -267,13 +295,11 @@ footer {
     width: 100%;
     height: 70px;
     position: absolute;
-    bottom: 0;
-
+    /* bottom: 0; */
     margin-top: 10px;
     display: flex;
     justify-content: center;
     flex-direction: column;
-
     background-color: var(--color1);
     background-image: url(../src/bg/fujinohana02.png);
 }
@@ -303,14 +329,10 @@ footer a {
     display: block;
     height: 5px;
     width: 100%;
-
     background-color: var(--color4);
-
     left: 50%;
-
     position: absolute;
     width: 0px;
-
     transition: all ease-in-out 250ms;
 }
 
@@ -324,12 +346,9 @@ footer a {
 }
 
 @media screen and (max-width: 1200px) {
-
-    .next,
-    .prev {
+    .next, .prev {
         display: none;
     }
-
     .intro_container {
         width: 90%;
     }
