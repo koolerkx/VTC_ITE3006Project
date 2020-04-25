@@ -109,6 +109,10 @@
     /*full size in the box*/
     background-size: cover;
     background-position: bottom 100%;
+    /* background-attachment: fixed; */
+}
+
+.parallex {
     background-attachment: fixed;
 }
 
