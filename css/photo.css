@@ -8,7 +8,7 @@
 }
 
 * {
-    font-family: zh_content01;
+    font-family: tetai, DFKai-sb;
 }
 
 .dropzone {
@@ -193,7 +193,7 @@ input {
 
 
 @media screen and (max-width:800px) {
-    #container{
+    #container {
         display: none;
     }
 

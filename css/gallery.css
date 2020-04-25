@@ -70,7 +70,7 @@ hr {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 40px;
-    
+
     background-color: rgba(0, 0, 0, 0.5);
 
     padding: 10px;
@@ -84,7 +84,7 @@ hr {
 .textBlock {
     height: 100%;
     width: 100%;
-     
+
     opacity: 1;
 
     position: absolute;
@@ -113,6 +113,8 @@ hr {
 
     overflow: auto;
 }
+
+
 /* 
 .bigPicture {
     display: none;

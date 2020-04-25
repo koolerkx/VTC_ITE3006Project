@@ -169,7 +169,7 @@
 
 .content_pt3 .introContainer {
     background-color: rgba(239, 96, 50, 0.2);
-    transform: rotate(-2deg) ;
+    transform: rotate(-2deg);
 }
 
 /* font texure */
@@ -236,15 +236,15 @@
     margin-left: 5%;
 }
 
-#container_kyokyuu {
+/* #container_kyokyuu {
     position: relative;
     width: 100%;
     min-height: 100%;
     padding-top: 100px;
     padding-bottom: 150px;
-}
+} */
 
-.notSupport{
+.notSupport {
     display: none;
 }
 
@@ -256,13 +256,17 @@
         align-items: center;
         text-align: center;
     }
-    .zoom, .zoom1 {
+
+    .zoom,
+    .zoom1 {
         display: none;
     }
+
     .inline-photo {
         margin: 50px;
         width: 500px;
     }
+
     .introContainer {
         margin-top: 80px;
         width: 500px;
@@ -274,7 +278,7 @@
 }
 
 @media screen and (max-width:600px) {
-    #container_kyokyuu{
+    #container_kyokyuu {
         display: none;
     }
 
@@ -285,4 +289,3 @@
         /* background-color: white; */
     }
 }
-

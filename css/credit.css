@@ -54,3 +54,7 @@ hr {
     transition: 500ms ease-in-out;
     background-color: #fff;
 }
+
+footer {
+    bottom: 0 !important;
+}
