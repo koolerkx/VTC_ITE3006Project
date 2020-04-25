@@ -24,6 +24,8 @@
   animation: laod 2200ms ease-in-out;
 }
 
+/* set loading object moving and scaling */
+/* the object should be being greater and move right */
 @keyframes laod {
   from {
     transform: scale(-0.5, 0.5);
@@ -36,6 +38,7 @@
   }
 }
 
+/* fade out after load */
 @keyframes laod_div {
   from {}
 
@@ -50,6 +53,7 @@
 
 /*End of Loading image*/
 
+/* all should be none at first for slide show */
 .character_img {
   display: none;
 }
@@ -76,7 +80,6 @@
 }
 
 /* Next & previous buttons */
-
 .prev,
 .next {
   cursor: pointer;

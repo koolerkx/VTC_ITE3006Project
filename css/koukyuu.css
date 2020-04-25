@@ -122,7 +122,7 @@
     /* transform: translateX(-50%); */
 }
 
-.fire video, .sao video, .idol video {
+.fire video, .sao video, .idol video, .team8 video {
     min-width: 100%;
     /* position: fixed; */
     top: 0;
@@ -185,7 +185,7 @@ iframe {
     /* text-align: left; */
     font-size: 100px;
     font-weight: bold;
-    font-family: tetai;
+    font-family: tetai, yuShi, Konzou;
     margin-bottom: 20px;
 }
 
