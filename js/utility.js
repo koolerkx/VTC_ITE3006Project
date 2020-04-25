@@ -36,10 +36,10 @@ function closeNav() {
 
 //right side Navbar appear or disappear
 const navSlide = () => {
-  const smallNav = document.querySelector(".smallNav");
+  const sideNav = document.querySelector(".sideNav");
   const nav = document.querySelector(".nav-links");
 
-  smallNav.addEventListener("click", () => {
+  sideNav.addEventListener("click", () => {
     //Toggle Nav
     nav.classList.toggle("nav-active");
   });
