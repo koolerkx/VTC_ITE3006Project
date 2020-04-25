@@ -61,7 +61,7 @@ body {
     text-align: center;
     color: white;
 
-    font-family: tetai;
+    font-family: tetai, DFKai-sb;
 
     /* font-family: ; */
 }
@@ -136,19 +136,16 @@ nav {
     color: var(--color4);
 }
 
+/* color underline  */
 .nav-links a::after {
     content: "";
     display: block;
     height: 5px;
-    width: 100%;
+    width: 0px;
     background-color: var(--color4);
 
-    left: 50%;
-
     position: absolute;
-    width: 0px;
     left: 50%;
-
     transition: all ease-in-out 250ms;
 }
 
@@ -158,27 +155,27 @@ nav {
 }
 
 /*right side of the Navbar*/
-.smallNav {
+.sideNav {
     float: right;
     display: none;
     cursor: pointer;
 }
 
-.smallNav div {
+.sideNav div {
     width: 30px;
     height: 3px;
     background-color: white;
     margin: 5px;
 }
 
+/* When the screen less than 1200px Navbar change to Sidebar */
 @media screen and (max-width: 1200px) {
 
-    /* navbar to sidebar */
-    .smallNav {
+    .sideNav {
         margin: 30px;
     }
 
-    .smallNav {
+    .sideNav {
         display: block;
     }
 

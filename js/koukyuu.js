@@ -17,7 +17,7 @@
      var offset = window.pageYOffset;
      scroll = offset;
      //Increase the width and top %
-     layer2.style.width = (100 + scroll / 5) + '%';
+     layer2.style.width = (100 + scroll / 10) + '%';
      layer2.style.top = scroll / 50 + '%';
  });
 
@@ -31,7 +31,7 @@
      layer3.style.left = scroll / 50 + '%';
  });
 
-  //Scrolling Effect2
+ //Scrolling Effect2
  //When the mouse scrolling, the photo will move
  var kaminari_left = document.getElementById('kaminari_left')
  scroll = window.pageYOffset;
@@ -40,8 +40,8 @@
      scroll = offset;
      scroll -= 1000;
      //Increase the width and right %
-    //  layer1.style.width = (100 + scroll / 5) + '%';
-    kaminari_left.style.right = scroll / 50 + '%';
+     //  layer1.style.width = (100 + scroll / 5) + '%';
+     kaminari_left.style.right = scroll / 50 + '%';
  });
 
  var kaminari_right = document.getElementById('kaminari_right')
@@ -51,8 +51,8 @@
      scroll = offset;
      scroll -= 1000;
      //Increase the width and left %
-    //  layer3.style.width = (100 + scroll / 5) + '%';
-    kaminari_right.style.left = scroll / 50 + '%';
+     //  layer3.style.width = (100 + scroll / 5) + '%';
+     kaminari_right.style.left = scroll / 50 + '%';
  });
 
  // Detect request animation frame
@@ -92,6 +92,6 @@
      );
  }
 
-// window.onload = function() {
-//     this.document.getElementById("zoom").style.height = window.innerHeight + "px";
-// }
+ // window.onload = function() {
+ //     this.document.getElementById("zoom").style.height = window.innerHeight + "px";
+ // }
