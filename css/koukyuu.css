@@ -20,8 +20,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 800px;
-    z-index: 50;
+    height: 500px;
+    z-index: 1;
     background: linear-gradient(transparent, rgb(147, 176, 255));
 }
 
@@ -43,10 +43,10 @@
     position: absolute;
     left: 0;
     width: 100%;
-    height: 500px;
-    transform: translateY(130%);
+    height: 700px;
+    transform: translateY(65%);
     /* top: 800px; */
-    z-index: 10;
+    z-index: 9;
 }
 
 .zoom #layer3 {
@@ -54,7 +54,7 @@
     right: 0;
     transform: translateX(60%);
     width: 100%;
-    z-index: 9;
+    z-index: 11;
 }
 
 /*End of Scrolling animation in the top*/
@@ -116,7 +116,8 @@
     background-attachment: fixed;
 }
 
-.fire, .sao {
+.fire,
+.sao {
     padding-bottom: 50px;
     padding-top: 50px;
     /* transform: translateX(-50%); */
@@ -134,7 +135,7 @@ iframe {
 
 .content .firekyoukyuu {
     font-size: 50px;
-    
+
 }
 
 .content_pt6 .idolKyokyuu {
@@ -169,6 +170,7 @@ iframe {
 
 /*End of Scrolling animation in the second*/
 
+/* Set each showing text and inlinePhoto */
 .content {
     padding: 100px;
     box-sizing: border-box;
@@ -189,6 +191,7 @@ iframe {
     margin-bottom: 20px;
 }
 
+/*Srolling to show the text or not*/
 .introContainer {
     border: 2px solid white;
     border-radius: 5%;
@@ -225,22 +228,22 @@ iframe {
 
 .content_pt4 .introContainer {
     background-color: rgba(239, 96, 50, 0.2);
-    transform: rotate(-2deg) ;
+    transform: rotate(-2deg);
 }
 
 .content_pt5 .introContainer {
     background-color: rgba(147, 176, 225, 0.2);
-    transform: rotate(-2deg) ;
+    transform: rotate(-2deg);
 }
 
 .content_pt6 .introContainer {
-    background-color: rgba(100,	82,	217, 0.2);
-    transform: rotate(5deg) ;
+    background-color: rgba(100, 82, 217, 0.2);
+    transform: rotate(5deg);
 }
 
 .content_pt7 .introContainer {
-    background-color: rgba(100,	82,	217, 0.2);
-    transform: rotate(3deg) ;
+    background-color: rgba(100, 82, 217, 0.2);
+    transform: rotate(3deg);
 }
 
 /* font texure */
@@ -264,7 +267,7 @@ iframe {
     color: transparent;
 }
 
-.saoKyokyuu  {
+.saoKyokyuu {
     background: url(../src/texture/water_texture.png);
     background-position: center;
     -webkit-background-clip: text;
@@ -278,7 +281,7 @@ iframe {
     color: transparent;
 }
 
-/*Srolling to show the photo or disappear*/
+/*Srolling to show the photo or not*/
 
 .inline-photo {
     border: 20px solid #fff;
@@ -301,6 +304,7 @@ iframe {
     transform: rotateZ(-2deg);
 }
 
+/* set the shadow of box */
 .content_pt1 .inline-photo {
     transform: rotateZ(5deg);
     box-shadow: 1em 1em 3em .25em rgb(147, 176, 225);
@@ -338,7 +342,7 @@ iframe {
 }
 
 .content_pt6 .inline-photo {
-    box-shadow: 1em 1em 3em .25em rgba(100,	82,	217, 0.2);
+    box-shadow: 1em 1em 3em .25em rgba(100, 82, 217, 0.2);
     /* height: 500px; */
     transform: rotateZ(-3deg);
     margin-right: 0;
@@ -346,20 +350,14 @@ iframe {
 }
 
 .content_pt7 .inline-photo {
-    box-shadow: 1em 1em 3em .25em rgba(100,	82,	217, 0.2);
+    box-shadow: 1em 1em 3em .25em rgba(100, 82, 217, 0.2);
     /* height: 500px; */
     transform: rotateZ(-3deg);
     margin-right: 0;
     margin-left: 5%;
 }
 
-#container_kyokyuu {
-    position: relative;
-    width: 100%;
-    min-height: 100%;
-    padding-top: 100px;
-    padding-bottom: 150px;
-} */
+/* set page max-width  */
 
 .notSupport {
     display: none;
@@ -385,9 +383,9 @@ iframe {
     }
 
     .content_pt4 .inline-photo {
-        width:auto;
+        width: auto;
     }
-    
+
     .introContainer {
         margin-top: 80px;
         width: 500px;
@@ -405,15 +403,15 @@ iframe {
         font-size: 50px;
     }
 
-@media screen and (max-width:600px) {
-    #container_kyokyuu {
-        display: none;
-    }
+    @media screen and (max-width:600px) {
+        #container {
+            display: none;
+        }
 
-    .notSupport {
-        margin-top: 200px;
-        display: block;
-        color: white;
-        /* background-color: white; */
+        .notSupport {
+            margin-top: 200px;
+            display: block;
+            color: white;
+            /* background-color: white; */
+        }
     }
-}
