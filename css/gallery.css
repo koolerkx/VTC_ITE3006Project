@@ -102,7 +102,7 @@ hr {
 }
 
 #loader_gallery {
-    position: absolute;
+    position: fixed;
     height: 100%;
     width: 100%;
 
@@ -110,4 +110,56 @@ hr {
     z-index: 100;
     opacity: 1;
     transition: 1000ms ease-in-out;
+
+    overflow: auto;
 }
+/* 
+.bigPicture {
+    display: none;
+}
+
+.bigPictureImg {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.bigPictureText {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    color: #FFF;
+    font-size: 60px;
+}
+
+.bigPictureImg , .bigPictureText {
+    animation: zoom 600ms;
+}
+
+@keyframes zoom {
+    from{ transform: scale(0);}
+    to{ transform: scale(1);}
+}
+
+.bigPictureClose {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+
+    font-size: 80px;
+    font-weight: blod;
+    transform: rotateZ(0deg);
+    transition: 500ms;
+
+    cursor: pointer;
+}
+
+.bigPictureClose:hover {
+    transform: rotateZ(-90deg);
+}
+ */

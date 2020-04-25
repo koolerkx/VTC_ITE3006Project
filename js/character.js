@@ -88,6 +88,6 @@ function Loading_animation() {
     setTimeout(() => { 
         perloader.style.display = 'none'; 
         topNav.className = "topNav"
-        topNav.style.display = "block"; 
+        topNav.style.display = "block";
     }, 2000);
 }

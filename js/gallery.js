@@ -1,41 +1,52 @@
 var loader_gallery = document.getElementById("loader_gallery");
 
-
-function shuffle(array){
-    for( var i=0; i<array.length-1; i++){
+// function shuffle the array
+function shuffle(array) {
+    for (var i = 0; i < array.length - 1; i++) {
         var j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
 
 var textList = document.getElementsByClassName("textBlock");
+var gridItem = [];
+var grid = document.getElementsByClassName("grid");
 
-var data = [];
-var info = {
-    textBlock: "",
-    src: "",
-}
+var data = [];  //arrary to save the grid item
 
-for(var i=0; i<textList.length; i++) {
+for (var i = 0; i < textList.length; i++) {
     data.push({
         textBlock: textList[i].innerHTML,
-        src: document.getElementsByClassName("grid-item-" + (i+1))[0].src
+        src: document.getElementsByClassName("grid-item-" + (i + 1))[0].src
     })
     // console.log(data[i].textBlock, data[i].src);
 }
 
+// make it in random order
 for (let i = 0; i < 10000; i++) {
     shuffle(data);
 }
 
-for(var i=0; i<textList.length; i++) {
+// modal pciture form w3school
+// var bigPicture = document.getElementById("bigPicture");
+// var bigPictureImg = document.getElementById("bigPictureImg");
+// var bigPictureText = document.getElementById("bigPictureText");
+
+// assign back to the web also assign modal
+for (var i = 0; i < textList.length; i++) {
     textList[i].innerHTML = data[i].textBlock;
-    document.getElementsByClassName("grid-item-" + (i+1))[0].src = data[i].src;
+    gridItem[i] = document.getElementsByClassName("grid-item-" + (i + 1))[0];
+    gridItem[i].src = data[i].src;
 }
 
-loader_gallery.style.opacity = 0; 
-    this.setTimeout(() => {
-        loader_gallery.style.display = "none";
-    }, 1000);
+// var span = document.getElementById("bigPictureClose");
 
+// span.onclick = function () {
+//     modal.style.display = "none";
+// }
 
+// finish loading
+loader_gallery.style.opacity = 0;
+this.setTimeout(() => {
+    loader_gallery.style.display = "none";
+}, 1000);
