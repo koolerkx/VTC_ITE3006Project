@@ -12,34 +12,25 @@
 
     /* text-shadow: 0px 0px 20px rgba(18,233,255,0.5);
     -webkit-text-stroke: 0.025px black; */
-
+    
+    background-size: 800%;
     animation: title 5s ease-in-out infinite;
 }
 
 @keyframes title {
     0% {
         text-shadow: 0px 0px 20px rgba(18, 233, 255, 0.5);
-        /* background-position: left; */
-        background-size: 800%;
     }
 
     33% {
         text-shadow: 0px 0px 20px rgba(239, 96, 50, 0.5);
     }
-
-    50% {
-        /* background-position: center; */
-        background-size: 800%;
-    }
-
     66% {
         text-shadow: 0px 0px 20px rgba(231, 215, 166, 0.5);
     }
 
     100% {
         text-shadow: 0px 0px 20px rgba(18, 233, 255, 0.5);
-        /* background-position: left; */
-        background-size: 800%;
     }
 }
 
