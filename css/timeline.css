@@ -139,7 +139,7 @@ h4 {
 
 @media screen and (min-width: 700px) {
     .timelineItem-mark {
-        text-align: center;
+        text-align: center !important;
         margin: 1rem auto;
     }
     .timelineItem-mark:nth-of-type(2n) {

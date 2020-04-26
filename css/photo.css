@@ -109,6 +109,8 @@ canvas {
     margin-top: 20px;
 
     font-size: large;
+
+
 }
 
 .accordion_active,
@@ -125,7 +127,7 @@ canvas {
 
     /* display: none; */
     max-height: 0;
-    overflow: hidden;
+    overflow: scroll;
 
     transition: max-height 200ms ease-out;
 }
@@ -150,7 +152,7 @@ canvas {
     margin-bottom: 10px;
     width: 50%;
     border: 1px solid #000;
-
+    margin-bottom: 200px;
 }
 
 .paraLabel,

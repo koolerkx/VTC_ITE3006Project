@@ -47,6 +47,7 @@ hr {
 
 .grid-container .grid:hover img {
   filter: blur(0px);
+  filter: grayscale(0%);
 }
 
 .grid-container .grid:hover {
